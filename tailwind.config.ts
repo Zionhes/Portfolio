@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss'
 const { createThemes } = require('tw-colors');
 
 export default {
@@ -21,4 +21,5 @@ export default {
       }
     })
   ],
-}
+} satisfies Config
+

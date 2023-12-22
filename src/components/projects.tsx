@@ -1,5 +1,6 @@
 import { FaLayerGroup } from "react-icons/fa";
-import { RiLinkM, RiPagesFill } from "react-icons/ri";
+import { FaRegCircleDot } from "react-icons/fa6"
+import { RiLinkM } from "react-icons/ri";
 import {
   SiTailwindcss,
   SiReact,
@@ -64,37 +65,28 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex h-fit w-full py-12 items-center justify-center text-slate-800"
+      className="flex flex-col py-12 items-center justify-center"
     >
-      <div
-        className={`flex h-full p-4 w-[95%] rounded-xl shadow
-          transition-all ease-in border border-slate-800
-          ${intersecting ? "bg-[#ebe6d3]" : "bg-slate-800"}`}
-        ref={elementRef}
-      >
-        <div
-          className={`w-full transition-all duration-300 ${
-            intersecting ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <h1 className="p-4 bg-amber-50 text-xl rounded-lg border border-slate-800 shadow
-            font-bold text-red-500 min-[440px]:text-2xl md:text-3xl">
-            <FaLayerGroup className="inline-block mr-4 text-slate-800 text-3xl" />
-            PROJECTS
-          </h1>
-
-          <div className="flex flex-wrap justify-center gap-9 py-10">
-            {projects.map((p) => (
-              <Card
-                img={p.image}
-                title={p.title}
-                desc={p.description}
-                stack={p.stack}
-              />
-            ))}
-          </div>
-        </div>
+      <div className="bg-primary w-full p-6 flex border-b-4 border-primary-shadow items-center justify-end">
+        <h1 className="text-xl font-bold">
+          PROJECTS
+        </h1>
+        <FaRegCircleDot className="ml-6 text-red-500" />
       </div>
+
+      <br />
+
+      <div className="flex flex-wrap bg-primar justify-center gap-9 py-10">
+        {projects.map((p) => (
+          <Card
+            img={p.image}
+            title={p.title}
+            desc={p.description}
+            stack={p.stack}
+          />
+        ))}
+      </div>
+
     </section>
   );
 }
@@ -102,11 +94,11 @@ export default function Projects() {
 function Card({ img, title, desc, stack }) {
   return (
     <div
-      className="max-h-[25rem] min-h-[25rem] max-w-[90%] overflow-hidden 
-        rounded-lg bg-amber-50 shadow border border-slate-800"
+      className="max-h-[25rem] max-w-sm overflow-hidden 
+        rounded-lg bg-primary shadow-lg border-b-4 border-primary-shadow"
     >
       {/* Top: Image */}
-      <div className="h-1/2 overflow-hidden rounded-b-lg border border-slate-800 shadow-md">
+      <div className="h-1/2 overflow-hidden rounded-b-lg shadow-lg">
         <img className="h-full w-full object-cover" src={img} alt={title} />
       </div>
 
