@@ -14,11 +14,11 @@ export default function Header() {
 function Card() {
   return (
     <div
-      className="bg-primary border-primary-shadow xl:after:border-secondary-shadow relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-xl border-b-[5px] p-4 
+      className="transition-all ease-out bg-primary border-primary-shadow xl:after:border-secondary-shadow relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-xl border-b-[6px] p-4 header
         shadow-xl sm:h-72 sm:max-w-md sm:gap-6 
         sm:p-6 md:h-[19rem] 
         md:max-w-lg xl:h-[22.5rem] xl:max-w-[41rem] xl:gap-8 xl:p-9 
-        xl:pt-[4.2rem] xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-2 xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
+        xl:pt-[4.2rem] xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-[6px] xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
     >
       <ImageForm />
       <ResponsiveText />
@@ -29,7 +29,7 @@ function Card() {
 function ImageForm() {
   return (
     <div
-      className="border-b-secondary-shadow bg-secondary h-full basis-20 overflow-hidden rounded-lg border-b-2 shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
+      className="border-b-secondary-shadow bg-secondary h-full basis-20 overflow-hidden rounded-lg border-b-[3px] shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
         sm:basis-28 
         md:basis-32 
         xl:h-auto xl:w-[82%] xl:basis-auto xl:rounded-full xl:border-8 xl:border-red-500

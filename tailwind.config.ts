@@ -10,7 +10,6 @@ export default {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
     createThemes({
       twilight: {
         'primary': "#FEF3C7",

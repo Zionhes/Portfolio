@@ -7,24 +7,25 @@ export default function Experiences() {
   return (
     <section
       id="experience"
-      className="h-[50rem flex flex-col mb-20 justify-center items-center"
+      className="flex flex-col justify-center items-center"
     >
 
-      <div className="bg-primary w-full p-6 flex border-b-4 border-primary-shadow items-center justify-content">
+      <div className="relative bg-primary w-[98%] shadow-md p-6 flex border-b-[4px] overflow-hidden border-secondary-shadow rounded-lg items-center justify-content
+             after:h-[10%] after:w-full after:bg-red-500 after:absolute after:left-0 after:bottom-0">
         <FaRegCircleDot className="mr-6 text-red-500" />
-        <h1 className="text-xl font-bold">
+        <h2 className="text-xl font-bold">
           EXPERIENCE
-        </h1>
+        </h2>
       </div>
 
       <br />
 
-      <div className="rounded-xl w-[98%] bg-primary px-14 border-b-4 border-primary-shadow py-5">
-        <h3 className="font-bold min-[440px]:text-xl">
+      <article className="shadow-lg rounded-xl w-[90%] bg-primary p-[2.7rem] border-b-[6px] border-primary-shadow">
+        <h3 className="font-bold">
           <span className="text-red-500">Front-End Developer</span> • Alcaldía Bolivariana
           del Municipio Ribero
         </h3>
-        <p className="text-sm font-light">
+        <p className="text-[0.85rem] font-light mt-2">
           Jun 2022 - Dic 2023 | Comunication and Information deparment
         </p>
         <br />
@@ -40,16 +41,16 @@ export default function Experiences() {
             web interface using TailwindCSS.
           </li>
         </ul>
-      </div>
+      </article>
 
       <br />
 
-      <div className="rounded-xl w-[98%] bg-primary px-14 border-b-4 border-primary-shadow py-5">
-        <h3 className="font-bold min-[440px]:text-xl">
+      <article className="shadow-lg rounded-xl w-[90%] bg-primary p-[2.7rem] border-b-[6px] border-primary-shadow">
+        <h3 className="font-bold">
           <span className="text-red-500">Full-stack COO</span> • Alcaldía Bolivariana del
           Municipio Ribero
         </h3>
-        <p className="text-sm font-light">
+        <p className="text-sm font-light mt-2">
           Oct 2023 - Dic 2023 | Technological Development Department
         </p>
         <br />
@@ -59,9 +60,8 @@ export default function Experiences() {
             written with React, Tailwind, Next.Js and PostgreSQL for tax
             managment of merchants in the region.
           </li>
-          <br />
         </ul>
-      </div>
+      </article>
     </section>
   );
 }

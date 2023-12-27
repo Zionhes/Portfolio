@@ -4,7 +4,6 @@ import Experiences from "./components/about";
 import Projects from "./components/projects";
 
 import "./App.css";
-//#8bb29c
 export default function App() {
   return (
     <>

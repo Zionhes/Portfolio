@@ -23,16 +23,16 @@ const projects = [
       "https://s3-alpha.figma.com/hub/file/1392024499/8880c4df-f088-43af-b98a-89a3689c3d15-cover.png",
     stack: [
       <SiTypescript className="text-blue-500" />,
-      <SiReact className="text-sky-400" />,
+      <SiReact className="-sky-400" />,
       <SiTailwindcss className="text-cyan-500" />,
       <SiSupabase className="text-emerald-500" />,
       <SiNextdotjs className="text-white" />,
     ],
   },
   {
-    title: "Music App",
+    title: "Standalone",
     description:
-      "A minimalistic music app, with elegant design and perspective",
+      "Retriever over the over the world system comuninst",
     image:
       "https://s3-alpha.figma.com/hub/file/1392024499/8880c4df-f088-43af-b98a-89a3689c3d15-cover.png",
     stack: [
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Music App",
     description:
-      "A minimalistic music app, with elegant design and perspective nghghg ihugyugyhg ijiyuyutuyt hhfgh hfg hfh hfytyty",
+      "A minimalistic music app, with elegant design and perspective nghghg ihugyugyhg ijiyuyutu",
     image:
       "https://img.freepik.com/free-vector/flat-design-ui-ux-landing-page_52683-72187.jpg",
     stack: [
@@ -65,18 +65,21 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col py-12 items-center justify-center"
+      className="flex overflow-hidden relative flex-col py-12 items-center justify-center"
     >
-      <div className="bg-primary w-full p-6 flex border-b-4 border-primary-shadow items-center justify-end">
-        <h1 className="text-xl font-bold">
+      <div className="relative overflow-hidden w-[98%] bg-primary p-6 flex border-b-[4px] shadow-xl border-secondary-shadow rounded-lg items-center justify-content
+             after:h-[10%] after:w-full after:bg-red-500 after:absolute after:left-0 after:bottom-0">
+        <FaRegCircleDot className="mr-6 text-red-500" />
+        <h2 className="text-xl font-bold">
           PROJECTS
-        </h1>
-        <FaRegCircleDot className="ml-6 text-red-500" />
+        </h2>
       </div>
 
       <br />
 
-      <div className="flex flex-wrap bg-primar justify-center gap-9 py-10">
+      <div 
+        className="flex flex-wrap justify-center gap-9
+          after:h-full after:w-[3rem] after:border-l-[5px] after:border-dashed after:border-secondary-shadow after:left-[2.155rem] after:top-[7.9rem] after:absolute">
         {projects.map((p) => (
           <Card
             img={p.image}
@@ -93,44 +96,46 @@ export default function Projects() {
 
 function Card({ img, title, desc, stack }) {
   return (
-    <div
-      className="max-h-[25rem] max-w-sm overflow-hidden 
-        rounded-lg bg-primary shadow-lg border-b-4 border-primary-shadow"
+    <article
+      className="max-h-[26rem] max-w-[19.2rem] flex relative flex-col gap-[1.25rem] ml-[3.7rem] rounded 
+        bg-primary shadow-xl border-b-[6px] border-b-primary-shadow p-5
+        after:h-[6px] after:w-20 after:absolute after:border-dashed after:border-t-[5px] after:border-secondary-shadow after:top-[51%] after:left-[-26%]
+        before:h-[10px] before:w-[10px] before:absolute before:bg-secondary before:top-[50%] before:left-[-3rem] z-50"
     >
       {/* Top: Image */}
-      <div className="h-1/2 overflow-hidden rounded-b-lg shadow-lg">
+      <div className="h-[48%] overflow-hidden rounded border border-primary-shadow">
         <img className="h-full w-full object-cover" src={img} alt={title} />
       </div>
 
       {/* Bottom: Content */}
-      <div className="grid h-1/2 grid-cols-[1fr_auto] items-center px-5">
-        <LeftBoxForm title={title} description={desc} />
+      <div className="grid h-[52%] gap-[1.25rem] grid-cols-[auto_1fr] items-center">
         <RightStackForm stack={stack} />
+        <LeftBoxForm title={title} description={desc} />
       </div>
-    </div>
+    </article>
   );
 }
 
 function LeftBoxForm({ title, description }) {
   return (
-    <div className="flex gap-3 h-[84%] flex-col justify-between text-slate-800">
-      <h1 className="text-3xl font-bold text-red-500 underline decoration-slate-800">
+    <div className="flex gap-3 h-[100%] flex-col justify-between text-slate-800">
+      <h1 className="text-3xl font-bold text-red-500 underlin decoration-slate-800">
         {title}
       </h1>
 
       <p className="grow overflow-scroll pr-2.5">{description}</p>
 
-      <div className="flex gap-2">
-        <Button>
-          <SiGithub className="transition-all ease-in group-hover:text-red-500" />
-          <span className="mx-1 text-[0.5rem]">|</span>
-          Github
-        </Button>
-
-        <Button>
+      <div className="flex gap-2 justify-end">
+        {/* <Button rounded="rounded">
           <RiLinkM className="ml-[-5px] text-lg transition-all group-hover:text-red-500" />
           <span className="mx-1 text-[0.5rem]">|</span>
           Live
+        </Button> */}
+
+        <Button rounded="rounded">
+          <SiGithub className="transition-all ease-in group-hover:text-red-500" />
+          <span className="mx-1 text-[0.5rem]">|</span>
+          Github code
         </Button>
       </div>
     </div>
@@ -139,11 +144,13 @@ function LeftBoxForm({ title, description }) {
 
 function RightStackForm({ stack }: { stack: any }) {
   return (
-    <div
-      className="flex h-[85%] flex-col items-center justify-center gap-3
-          rounded-lg bg-slate-800 px-2 py-3 text-xl text-white shadow"
-    >
-      {stack}
+    <div className="h-full flex items-center">
+      <div
+        className="flex h-full w-[2.8rem] flex-col items-center justify-center gap-3
+          rounded bg-[#2F4858] border-b-[4px] border-slate-800 py-3 text-xl text-white shadow-md"
+      >
+        {stack}
+      </div>
     </div>
   );
 }
