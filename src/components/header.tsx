@@ -1,11 +1,15 @@
-import { SiGithub, SiGoogledocs } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import img2 from "../picture-of-me.png";
 
 import Button from "./button";
 
-export default function Header() {
+
+function Header() {
   return (
-    <header id="home" className="flex h-[90vh] items-center justify-center">
+    <header
+      id="home"
+      className="custom-bg-2 flex h-screen items-center justify-center overflow-hidden" >
+      <MountainsDecorator />
       <Card />
     </header>
   );
@@ -14,11 +18,11 @@ export default function Header() {
 function Card() {
   return (
     <div
-      className="transition-all ease-out bg-primary border-primary-shadow xl:after:border-secondary-shadow relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-xl border-b-[6px] p-4 header
-        shadow-xl sm:h-72 sm:max-w-md sm:gap-6 
-        sm:p-6 md:h-[19rem] 
-        md:max-w-lg xl:h-[22.5rem] xl:max-w-[41rem] xl:gap-8 xl:p-9 
-        xl:pt-[4.2rem] xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-[6px] xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
+      className=" noise relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-xl transition-all ease-out
+        sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
+        md:h-[19rem] md:max-w-lg 
+        xl:h-[22.5rem] xl:max-w-[41rem] xl:gap-8 xl:p-9 xl:pt-[4.2rem] 
+        xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-[6px] xl:after:border-secondary-shadow xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
     >
       <ImageForm />
       <ResponsiveText />
@@ -26,10 +30,20 @@ function Card() {
   );
 }
 
+function MountainsDecorator() {
+  /*
+   * It's complicated explain this components,
+   * but does his work.
+   */
+  return (
+    <div className="custom-bg_3 fixed left-0 top-0 mx-auto h-[100vh] w-[150%]"></div>
+  )
+}
+
 function ImageForm() {
   return (
     <div
-      className="border-b-secondary-shadow bg-secondary h-full basis-20 overflow-hidden rounded-lg border-b-[3px] shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
+      className="h-full basis-20 overflow-hidden rounded-[0.4rem] border-b-[3px] border-b-secondary-shadow bg-secondary shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
         sm:basis-28 
         md:basis-32 
         xl:h-auto xl:w-[82%] xl:basis-auto xl:rounded-full xl:border-8 xl:border-red-500
@@ -86,10 +100,17 @@ function ResponsiveText() {
         </Button>
         <span className="text-xl font-thin">|</span>
         <Button>
+          <SiLinkedin className="mr-1 text-sm transition-all ease-in group-hover:text-red-500" />
+          LinkedIn
+        </Button>
+
+        {/* <Button>
           <SiGoogledocs className="mr-1 text-sm transition-all ease-in group-hover:text-red-500" />
           Resume
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
 }
+
+export default Header;
