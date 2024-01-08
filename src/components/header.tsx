@@ -1,32 +1,41 @@
+import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import img2 from "../picture-of-me.png";
 
 import Button from "./button";
-
+import EmailMe from "./email-me";
 
 function Header() {
   return (
     <header
       id="home"
-      className="custom-bg-2 flex h-screen items-center justify-center overflow-hidden" >
+      className="md:w[80%] custom-bg-2 relative flex flex-col h-screen items-center justify-center overflow-hidden"
+    >
       <MountainsDecorator />
       <Card />
+      <EmailMe />
     </header>
   );
 }
 
 function Card() {
   return (
-    <div
-      className=" noise relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-xl transition-all ease-out
+    <motion.div
+      initial={{ x: 1920 }}
+      animate={{ x: 0 }}
+      transition={{ type: "spring", bounce: 0.5 }}
+    >
+      <div
+        className=" relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] transition-all ease-out
         sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
         md:h-[19rem] md:max-w-lg 
         xl:h-[22.5rem] xl:max-w-[41rem] xl:gap-8 xl:p-9 xl:pt-[4.2rem] 
         xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-[6px] xl:after:border-secondary-shadow xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
-    >
-      <ImageForm />
-      <ResponsiveText />
-    </div>
+      >
+        <ImageForm />
+        <ResponsiveText />
+      </div>
+    </motion.div>
   );
 }
 
@@ -36,8 +45,8 @@ function MountainsDecorator() {
    * but does his work.
    */
   return (
-    <div className="custom-bg_3 fixed left-0 top-0 mx-auto h-[100vh] w-[150%]"></div>
-  )
+    <div className="custom-bg_3 absolute left-0 top-0 mx-auto h-[100vh] w-[150%]"></div>
+  );
 }
 
 function ImageForm() {
@@ -89,7 +98,7 @@ function ResponsiveText() {
           md:text-[1.25rem]
           xl:mb-0 2xl:text-[1.60rem] 2xl:leading-9"
       >
-        ML enthusiast and web Developer with 2 years of experience.
+        <span className="text-red-500 font-bold">+2</span> years of experience as Front-End Developer and ML enthusiast.
       </p>
 
       {/* Buttons */}

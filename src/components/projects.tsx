@@ -1,3 +1,8 @@
+import p1 from "../assets/p1.jpg";
+
+import { GiEgyptianTemple } from "react-icons/gi";
+import { GiEgyptianSphinx } from "react-icons/gi";
+
 import { FaLayerGroup } from "react-icons/fa";
 import { FaRegCircleDot } from "react-icons/fa6";
 import { RiLinkM } from "react-icons/ri";
@@ -19,8 +24,7 @@ const projects = [
     title: "Music App",
     description:
       "A minimalistic music app, with elegant design and perspective",
-    image:
-      "https://s3-alpha.figma.com/hub/file/1392024499/8880c4df-f088-43af-b98a-89a3689c3d15-cover.png",
+    image: p1,
     stack: [
       <SiTypescript className="text-blue-600" />,
       <SiReact className="text-sky-500" />,
@@ -58,50 +62,44 @@ const projects = [
   },
 ];
 
+import { PiHandTapDuotone } from "react-icons/pi";
+
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="mx-auto mt-10 w-full overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-opacity-40"
-    >
-      <div
-        className="justify-content relative flex w-full items-center overflow-hidden border-b-[4px] border-secondary-shadow bg-primary p-6 shadow
-             after:absolute after:bottom-0 after:left-0 after:h-[10%] after:w-full after:bg-red-500 after:shadow-xl"
-      >
-        <FaRegCircleDot className="mr-6 text-red-500" />
-        <h2 className="text-xl font-bold">PROJECTS</h2>
-      </div>
-      {/* Container */}
-      <div className="bg-primary px-6 py-3">
-        {projects.map((p) => (
-          <article className="group relative py-6 pl-8 sm:pl-32">
-            {/* Vertical line */}
+    <section id="projects" className="custom-bg-5 mx-auto w-full pt-16">
+      <div className="mx-auto h-full pb-10 md:w-[945px]">
+        <div
+          className="noise justify-content relative flex w-full items-center rounded border-b-[5px] border-secondary-shadow bg-primary p-6 shadow-md 
+            before:absolute before:bottom-0 before:left-0 before:h-[9%] before:w-full before:bg-red-500 before:content-[''] 
+            after:absolute after:left-0 after:top-0 after:h-[13%] after:w-full after:border-b-[3px] after:border-secondary-shadow after:bg-red-500 lg:w-[945px]"
+        >
+          <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" />
+          <h2 className="text-xl font-bold">PROJECTS</h2>
+        </div>
+
+        <div className="relative mt-6 flex flex-col gap-10">
+          <article className="peer relative mx-auto h-auto w-[90%]">
+            <img
+              className="mx-auto mt-3 h-full w-[99.5%] rounded-t object-cover peer-hover:bg-black"
+              src={projects[0].image}
+              alt={projects[0].title}
+            />
+            <PiHandTapDuotone className="absolute bottom-10 right-14 rotate-[-45deg] text-4xl text-white" />
             <div
-              className="mb-1 flex flex-col items-start before:absolute 
-                before:left-[0.47rem] before:h-full before:-translate-x-1/2 before:translate-y-3 before:self-start before:bg-red-400 before:px-px before:shadow-xl 
-                after:absolute after:left-2 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1.5 after:rounded-full after:border-4 after:border-secondary after:bg-primary after:shadow-xl group-last:before:hidden sm:flex-row sm:before:ml-[6rem] sm:after:left-0 sm:after:ml-[6.5rem]"
+              className="noise justify-content relative flex h-10 w-full items-center overflow-hidden rounded border-b-[3px] border-secondary-shadow bg-primary px-6 py-2 shadow-md
+             before:absolute before:bottom-0 before:left-0 before:h-[9%] before:w-full before:bg-red-500 before:content-[''] after:absolute
+             after:left-0 after:top-0 after:h-[15%] after:w-full after:border-b-[2px] after:border-secondary-shadow after:bg-red-500"
             >
-              {/* Title and Stack */}
-              <div className="left-0 inline-flex h-auto w-full -translate-y-2 items-center justify-between overflow-hidden py-1 text-2xl sm:absolute sm:mb-0">
-                <h2 className="text-2xl font-bold italic sm:mb-0">
-                  {p.title}
-                </h2>
+              {/* <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" /> */}
+              <div className="flex w-full items-center justify-between">
+                <h1 className="font-bold">Music App</h1>
+                <div className="flex gap-2 text-sm">
+                  {projects[0].stack.map((s) => s)}
+                </div>
               </div>
-              <div className="mb-3 flex gap-3 text-lg">{p.stack}</div>
-            </div>
-
-            {/* Description */}
-            <p className="">{p.description}</p>
-
-            <div className="">
-              <img
-                className="mt-3 h-full w-full rounded object-cover"
-                src={p.image}
-                alt={p.title}
-              />
             </div>
           </article>
-        ))}
+        </div>
       </div>
     </section>
   );
