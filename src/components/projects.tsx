@@ -63,19 +63,16 @@ const projects = [
 ];
 
 import { PiHandTapDuotone } from "react-icons/pi";
+import HeaderTitle from "./header-title";
 
 export default function Projects() {
   return (
     <section id="projects" className="custom-bg-5 mx-auto w-full pt-16">
       <div className="mx-auto h-full pb-10 md:w-[945px]">
-        <div
-          className="noise justify-content relative flex w-full items-center rounded border-b-[5px] border-secondary-shadow bg-primary p-6 shadow-md 
-            before:absolute before:bottom-0 before:left-0 before:h-[9%] before:w-full before:bg-red-500 before:content-[''] 
-            after:absolute after:left-0 after:top-0 after:h-[13%] after:w-full after:border-b-[3px] after:border-secondary-shadow after:bg-red-500 lg:w-[945px]"
-        >
+        <HeaderTitle>
           <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" />
           <h2 className="text-xl font-bold">PROJECTS</h2>
-        </div>
+        </HeaderTitle>
 
         <div className="relative mt-6 flex flex-col gap-10">
           <article className="peer relative mx-auto h-auto w-[90%]">
@@ -93,7 +90,7 @@ export default function Projects() {
               {/* <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" /> */}
               <div className="flex w-full items-center justify-between">
                 <h1 className="font-bold">Music App</h1>
-                <div className="flex gap-2 text-sm">
+                <div className="flex gap-2 rounded bg-tertiary p-1 text-sm">
                   {projects[0].stack.map((s) => s)}
                 </div>
               </div>

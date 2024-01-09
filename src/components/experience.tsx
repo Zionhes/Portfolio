@@ -1,30 +1,23 @@
 import useIntersection from "../hooks/useIntersection";
-import { FaRegCircleDot } from "react-icons/fa6";
-import { GiEgyptianSphinx } from "react-icons/gi";
-import { GiEgyptianBird, GiEgyptianTemple } from "react-icons/gi";
+import { GiEgyptianBird } from "react-icons/gi";
+import HeaderTitle from "./header-title";
 
 export default function Experiences() {
   const [elementRef, isIntersecting] = useIntersection({ threshold: 0.2 });
 
   return (
     <section id="experience" className="custom-bg-4 py-16">
-      <div className="lg:w-[945px] mx-auto w-[96%]">
-        <div
-          className="noise justify-content relative flex w-full items-center rounded border-b-[5px] border-secondary-shadow bg-primary py-6 px-[1.45rem] shadow-md
-             before:absolute before:bottom-0 before:left-0 before:h-[9%] before:w-full before:bg-red-500 before:content-[''] after:absolute
-             after:left-0 after:top-0 after:h-[13%] after:w-full after:border-b-[3px] after:border-secondary-shadow after:bg-red-500"
-        >
+      <div className="mx-auto w-[96%] lg:w-[945px]">
+        <HeaderTitle>
           <GiEgyptianBird className="mr-[0.85rem] text-[1.8rem] text-red-500" />
           <h2 className="text-xl font-bold">EXPERIENCE</h2>
-        </div>
+        </HeaderTitle>
 
-        <div className="w-[98%] mx-auto backdrop-blur-[_px] relative flex flex-col items-center overflow-hidden border-x border-teal-300/30 bg-teal-500/25 bg-clip-padding backdrop-filter ">
-          <br />
-
-          <article
-            className="noise w-[90%] rounded-xl border-b-[6px] border-primary-shadow bg-primary p-[2.7rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]
-          "
-          >
+        <main
+          className="relative mx-auto mt-[-3.5px] flex w-[95%] flex-col items-center overflow-hidden border-x border-teal-300/30 bg-teal-500/25 p-4
+         "
+        >
+          <article className=" rounded-xl border-b-[6px] border-primary-shadow bg-primary p-[2.7rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <h3 className="font-bold">
               <span className="text-red-500">Front-End Developer</span> •
               Alcaldía Bolivariana del Municipio Ribero
@@ -36,8 +29,8 @@ export default function Experiences() {
             <ul className="list-inside list-disc marker:text-red-500">
               <li className="decoration-red-500">
                 Administration Dashboard migrated from vanilla HTML, CSS and JS
-                to React, for the management of personal and
-                services daily performed by the organization.
+                to React, for the management of personal and services daily
+                performed by the organization.
               </li>
               <br />
               <li>
@@ -49,7 +42,7 @@ export default function Experiences() {
 
           <br />
 
-          <article className="noise w-[90%] rounded-xl border-b-[6px] border-primary-shadow bg-primary p-[2.7rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+          <article className="rounded-xl border-b-[6px] border-primary-shadow bg-primary p-[2.7rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <h3 className="font-bold">
               <span className="text-red-500">Full-stack COO</span> • Alcaldía
               Bolivariana del Municipio Ribero
@@ -60,19 +53,19 @@ export default function Experiences() {
             <br />
             <ul className="list-inside list-disc marker:text-red-500">
               <li>
-                Designing and deployment of a web application from scratch written in
-                React, Tailwind, Next.Js and PostgreSQL for tax managment of
-                merchants in the region.
+                Designing and deployment of a web application from scratch
+                written in React, Tailwind, Next.Js and PostgreSQL for tax
+                managment of merchants in the region.
               </li>
             </ul>
           </article>
-          <br />
-        </div>
-          <div
-            className="noise justify-content relative flex w-full items-center overflow-hidden rounded border-b-[4px] border-secondary-shadow bg-primary p-9 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]
-              before:absolute before:content-[''] before:bg-red-500 before:h-[13%] before:w-full before:top-0 before:left-0 before:border-b-2 before:border-b-secondary-shadow
-              after:absolute after:bottom-0 after:left-0 after:h-[9%] after:w-full after:bg-red-500"
-          ></div>
+        </main>
+        <div
+          className="noise justify-content relative flex w-full items-center overflow-hidden rounded border-b-[4px] border-secondary-shadow bg-primary p-9
+            shadow-[0px_4px_6px_0px_#00000035,inset_0px_4px_3px_0px_#00000035]
+            before:absolute before:left-0 before:top-0 before:h-[13%] before:w-full before:border-b-2 before:border-b-secondary-shadow before:bg-red-500 before:content-['']
+            after:absolute after:bottom-0 after:left-0 after:h-[9%] after:w-full after:bg-red-500"
+        ></div>
       </div>
     </section>
   );

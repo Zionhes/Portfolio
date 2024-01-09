@@ -9,7 +9,7 @@ export default function useIntersection(opts = {}) {
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        setIsIntersecting(entry.isIntersecting)
+        setIsIntersecting(entry.isIntersecting);
       });
     };
 
@@ -22,7 +22,7 @@ export default function useIntersection(opts = {}) {
       if (element) {
         observer.unobserve(element);
       }
-    }
+    };
   });
 
   return [elementRef, isIntersecting];

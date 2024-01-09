@@ -1,32 +1,42 @@
-import { motion } from "framer-motion"
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
 import { IoSend } from "react-icons/io5";
 import { LuCopy } from "react-icons/lu";
 
 import Button from "./button";
+import { email } from "./links";
+
+function notify() {
+  toast.success("Copied", { style: { minWidth: "100px" } });
+}
 
 function EmailMe() {
   return (
-    <motion.form 
-      className="w-[88%] px-2 bg-secondary py-1 rounded-[0.3rem] mt-[-3px] border-b-[6px] border-secondary-shadow relative flex h-[3rem] place-content-center gap-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]"
+    <motion.div
+      className="relative"
       initial={{ x: -1920 }}
       animate={{ x: 0 }}
-      transition={{ type: "spring", bounce: 0.25, delay: 1 }}
+      transition={{ type: "spring", bounce: 0.35, delay: 0.6 }}
     >
-
-      <input
-        className="bg-primary basis-4/5 rounded text-center text-[0.82rem] shadow-[inset_0px_2px_0px_1px_#b2aa8b]"
-        id="mail"
-        type="text"
-        value="andersonegoistisch@gmail.com"
-        disabled
-      />
-      <Button className="flex basis-[15%]">
-        <LuCopy className="text-lg" />
-      </Button>
-      <Button className="basis-[15%]">
-        <IoSend className="ml-0.5 text-lg" />
-      </Button>
-    </motion.form>
+      <form className="mx-center mt-[-3.5px] flex h-[3rem] gap-2 rounded-lg border-b-[6px] border-secondary-shadow bg-secondary px-2 py-1 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.25)_0px_3px_7px_-3px]">
+        <input
+          className="grow cursor-text rounded bg-primary text-center text-[0.82rem] shadow-[inset_0px_2px_0px_1px_#a73030]"
+          type="text"
+          value={email}
+          disabled
+        />
+        <CopyToClipboard text={email} onCopy={notify}>
+          <Button className="flex max-w-[15%]">
+            <LuCopy className="text-lg" />
+          </Button>
+        </CopyToClipboard>
+        <Button className="flex max-w-[15%]" href={`mailto:${email}`}>
+          <IoSend className="ml-0.5 text-lg" />
+        </Button>
+      </form>
+      <Toaster />
+    </motion.div>
   );
 }
 

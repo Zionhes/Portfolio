@@ -4,42 +4,43 @@ import img2 from "../picture-of-me.png";
 
 import Button from "./button";
 import EmailMe from "./email-me";
+import { gitHub, linkedIn } from "./links";
 
 function Header() {
   return (
-    <header
-      id="home"
-      className="md:w[80%] custom-bg-2 relative flex flex-col h-screen items-center justify-center overflow-hidden"
+    <section
+      id="header"
+      className="custom-bg-2 relative flex h-screen flex-col items-center 
+        justify-center overflow-hidden px-8"
     >
-      <MountainsDecorator />
-      <Card />
-      <EmailMe />
-    </header>
+      <header>
+        <BackgroundMountains />
+        <Card />
+        <EmailMe />
+      </header>
+    </section>
   );
 }
 
 function Card() {
   return (
-    <motion.div
-      initial={{ x: 1920 }}
+    <motion.article
+      initial={{ x: 2000 }}
       animate={{ x: 0 }}
-      transition={{ type: "spring", bounce: 0.5 }}
-    >
-      <div
-        className=" relative mx-4 flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] transition-all ease-out
+      transition={{ type: "spring", bounce: 0.53 }}
+      className="relative flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.05)_0px_3px_7px_-3px] transition-all ease-out
         sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
         md:h-[19rem] md:max-w-lg 
         xl:h-[22.5rem] xl:max-w-[41rem] xl:gap-8 xl:p-9 xl:pt-[4.2rem] 
         xl:after:absolute xl:after:left-0 xl:after:top-0 xl:after:h-[9%] xl:after:w-full xl:after:border-b-[6px] xl:after:border-secondary-shadow xl:after:bg-red-500 xl:after:shadow-[rgba(50,_50,_105,_0.1)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.23)_0px_1px_1px_0px] 2xl:h-[27rem] 2xl:max-w-3xl 2xl:p-8 2xl:pt-[4.7rem]"
-      >
-        <ImageForm />
-        <ResponsiveText />
-      </div>
-    </motion.div>
+    >
+      <ImageForm />
+      <ResponsiveText />
+    </motion.article>
   );
 }
 
-function MountainsDecorator() {
+function BackgroundMountains() {
   /*
    * It's complicated explain this components,
    * but does his work.
@@ -58,12 +59,8 @@ function ImageForm() {
         xl:h-auto xl:w-[82%] xl:basis-auto xl:rounded-full xl:border-8 xl:border-red-500
         2xl:h-auto 2xl:w-full"
     >
-      <div className="z-50 hidden h-full w-full xl:block">
-        <img
-          src={img2}
-          alt="image"
-          className="z-50 h-full w-full object-cover"
-        />
+      <div className="hidden h-full w-full xl:block">
+        <img src={img2} alt="image" className="h-full w-full object-cover" />
       </div>
     </div>
   );
@@ -98,17 +95,18 @@ function ResponsiveText() {
           md:text-[1.25rem]
           xl:mb-0 2xl:text-[1.60rem] 2xl:leading-9"
       >
-        <span className="text-red-500 font-bold">+2</span> years of experience as Front-End Developer and ML enthusiast.
+        <span className="font-bold text-red-500">+2</span> years as Front-End
+        Developer and ML enthusiast.
       </p>
 
       {/* Buttons */}
       <div className="flex items-center gap-2 sm:gap-3">
-        <Button>
+        <Button href={gitHub} target="_blank">
           <SiGithub className="mb-[0.1rem] mr-[0.3rem] transition-all ease-in group-hover:text-red-500 xl:mb-0" />
           Github
         </Button>
         <span className="text-xl font-thin">|</span>
-        <Button>
+        <Button href={linkedIn} target="_blank">
           <SiLinkedin className="mr-1 text-sm transition-all ease-in group-hover:text-red-500" />
           LinkedIn
         </Button>

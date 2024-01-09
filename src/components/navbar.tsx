@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const links = [
-  { href: "#home", label: "Home" },
+  { href: "#header", label: "Home" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#about", label: "About" },
@@ -12,17 +12,18 @@ function NavBar() {
 
   return (
     <nav
-      className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px] fixed bg-secondary right-0 top-0 z-10 flex flex-col items-end m-6 p-1 rounded-lg text-tertiary border-b-4 border-secondary-shadow
-        md:p-12
+      className="fixed right-0 top-0 z-50 m-6 flex flex-col items-end rounded-lg border-b-4 border-secondary-shadow bg-secondary p-1 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px]
+        md:p-4
         xl:flex-row xl:justify-end xl:bg-transparent xl:shadow-none"
     >
-      <NavMenuButton onIsMenuClicked={() => setIsMenuOpen(state => !state)}/>
+      <NavMenuButton onIsMenuClicked={() => setIsMenuOpen((state) => !state)} />
 
       <ul
-        className={`${isMenuOpen
+        className={`${
+          isMenuOpen
             ? "rounded-lg border-b-2 border-primary-shadow bg-primary p-5 shadow-xl"
             : "hidden"
-          } 
+        } 
         lx:my-0 lx:flex lx:flex-row lx:gap-10 relative flex flex-col gap-7 
         font-medium transition-all duration-300 ease-in`}
       >
@@ -58,7 +59,7 @@ function NavMenuButton({ onIsMenuClicked }) {
         ></path>
       </svg>
     </label>
-  )
+  );
 }
 
 export default NavBar;
