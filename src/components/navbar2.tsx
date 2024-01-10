@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const links = [
+const sections = [
   { href: "#header", label: "Home" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
@@ -18,21 +18,6 @@ function NavBar() {
     >
       <NavMenuButton onIsMenuClicked={() => setIsMenuOpen((state) => !state)} />
 
-      <ul
-        className={`${
-          isMenuOpen
-            ? "rounded-lg border-b-2 border-primary-shadow bg-primary p-5 shadow-xl"
-            : "hidden"
-        } 
-        lx:my-0 lx:flex lx:flex-row lx:gap-10 relative flex flex-col gap-7 
-        font-medium transition-all duration-300 ease-in`}
-      >
-        {links.map((item) => (
-          <li className="relative text-tertiary hover:text-red-500">
-            <a href={item.href}>{item.label}</a>
-          </li>
-        ))}
-      </ul>
     </nav>
   );
 }

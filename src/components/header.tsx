@@ -46,7 +46,9 @@ function BackgroundMountains() {
    * but does his work.
    */
   return (
-    <div className="custom-bg_3 absolute left-0 top-0 mx-auto h-[100vh] w-[150%]"></div>
+    <div 
+      className="custom-bg_3 absolute left-0 top-0 mx-auto h-[100vh] w-[150%]
+        lg:w-[150%] lg:top-[10rem]" />
   );
 }
 

@@ -1,6 +1,6 @@
 import { GiFlyingBeetle, GiEgyptianWalk } from "react-icons/gi";
 
-import NavBar from "./components/navbar";
+import NavBar from "./components/Navbar";
 import Header from "./components/header";
 import Experiences from "./components/experience";
 import Projects from "./components/projects";

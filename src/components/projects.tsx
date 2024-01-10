@@ -18,6 +18,7 @@ import {
 import useIntersection from "../hooks/useIntersection";
 
 import Button from "./button";
+import Card from "./card";
 
 const projects = [
   {
@@ -75,6 +76,9 @@ export default function Projects() {
         </HeaderTitle>
 
         <div className="relative mt-6 flex flex-col gap-10">
+          <Card>
+            akjfakjs
+          </Card>
           <article className="peer relative mx-auto h-auto w-[90%]">
             <img
               className="mx-auto mt-3 h-full w-[99.5%] rounded-t object-cover peer-hover:bg-black"
