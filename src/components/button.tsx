@@ -10,7 +10,7 @@ export default function Button({
   onClick = null,
   target = "_self",
   paddingX = "px-2.5",
-  paddingY = "py-[0.45rem]"
+  paddingY = "py-[0.45rem]",
 }: {
   onClick?: any;
   children: any;

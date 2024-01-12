@@ -17,7 +17,6 @@ function NavBar() {
         xl:flex-row xl:justify-end xl:bg-transparent xl:shadow-none"
     >
       <NavMenuButton onIsMenuClicked={() => setIsMenuOpen((state) => !state)} />
-
     </nav>
   );
 }

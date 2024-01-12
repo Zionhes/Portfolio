@@ -1,3 +1,4 @@
+import { LazyMotion, domAnimation } from "framer-motion"
 import { GiFlyingBeetle, GiEgyptianWalk } from "react-icons/gi";
 
 import NavBar from "./components/Navbar";
@@ -14,17 +15,19 @@ import Main from "./components/main";
 function App() {
   return (
     <>
-      <NavBar />
-      <Main>
-        <Header />
-        <Divider />
-        <Experiences />
-        <Divider svg={<GiFlyingBeetle className="text-3xl text-white" />} />
-        <Projects />
-        <Divider svg={<GiEgyptianWalk className="text-3xl text-white" />} />
-        <About />
-        <Footer />
-      </Main>
+      <LazyMotion features={domAnimation} strict>
+        <NavBar />
+        <Main>
+          <Header />
+          <Divider />
+          <Experiences />
+          <Divider svg={<GiFlyingBeetle className="text-3xl text-white" />} />
+          <Projects />
+          <Divider svg={<GiEgyptianWalk className="text-3xl text-white" />} />
+          <About />
+          <Footer />
+        </Main>
+      </LazyMotion>
     </>
   );
 }

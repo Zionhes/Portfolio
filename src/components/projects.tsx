@@ -72,13 +72,11 @@ export default function Projects() {
       <div className="mx-auto h-full pb-10 md:w-[945px]">
         <HeaderTitle>
           <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" />
-          <h2 className="text-xl font-bold">PROJECTS</h2>
+          <h2 className="text-xl font-bold">PUBLIC PROJECTS</h2>
         </HeaderTitle>
 
         <div className="relative mt-6 flex flex-col gap-10">
-          <Card>
-            akjfakjs
-          </Card>
+          <Card>akjfakjs</Card>
           <article className="peer relative mx-auto h-auto w-[90%]">
             <img
               className="mx-auto mt-3 h-full w-[99.5%] rounded-t object-cover peer-hover:bg-black"

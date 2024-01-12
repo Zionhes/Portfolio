@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import img2 from "../picture-of-me.png";
 
@@ -18,16 +18,15 @@ function Header() {
         <Card />
         <EmailMe />
       </header>
-    </section>
-  );
+    </section>);
 }
 
 function Card() {
   return (
-    <motion.article
+    <m.article
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
-      transition={{ type: "spring", bounce: 0.53 }}
+      transition={{ type: "spring", bounce: 0.53, delay: 0 }}
       className="relative flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.05)_0px_3px_7px_-3px] transition-all ease-out
         sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
         md:h-[19rem] md:max-w-lg 
@@ -36,7 +35,7 @@ function Card() {
     >
       <ImageForm />
       <ResponsiveText />
-    </motion.article>
+    </m.article>
   );
 }
 
@@ -46,9 +45,10 @@ function BackgroundMountains() {
    * but does his work.
    */
   return (
-    <div 
+    <div
       className="custom-bg_3 absolute left-0 top-0 mx-auto h-[100vh] w-[150%]
-        lg:w-[150%] lg:top-[10rem]" />
+        lg:top-[10rem] lg:w-[150%]"
+    />
   );
 }
 

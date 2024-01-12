@@ -24,26 +24,30 @@ function About() {
             lg:p-14 lg:pb-16 lg:pt-12"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ex
-            efficitur, interdum erat vitae, vehicula nunc. Nam lobortis rhoncus
-            vestibulum. Morbi tempus, ipsum non eleifend convallis, neque odio
-            iaculis diam, id eleifend lectus felis id odio. Nunc mi mauris,
-            consectetur ut venenatis vel, viverra at dolor. Vivamus.
+            I was born on the 28th of November of 2000 in Carúpano, Venezuela.
+            I'm a passionate about computer science since a child. I started
+            playing with an old PC that belonged to my mother, I remember at
+            that time didn’t know english and it was very difficult to learn the
+            topics I liked, because my only connection between computer science
+            and me was the internet. But that didn’t stop me.
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ex
-            efficitur, interdum erat vitae, vehicula nunc. Nam lobortis rhoncus
-            vestibulum. Morbi tempus, ipsum non eleifend convallis, neque odio
-            iaculis diam, id eleifend lectus felis id odio. Nunc mi mauris,
-            consectetur ut venenatis vel, viverra at dolor. Vivamus.
+            One of my biggest motivations is learn. That's why I started to
+            self-taught, reading books and seeking tutorials firstly for learn
+            languages as English, French and German, and later on for learn
+            computer science. Years later I was going to start a computer
+            engineering, but I didn’t do it due to country situation, in spite
+            of that I have not stopped to keep learning and keep work as
+            developer.
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ex
-            efficitur, interdum erat vitae, vehicula nunc. Nam lobortis rhoncus
-            vestibulum.
+            I like share knowledge, meet people and learn new things which will
+            be our future.
           </p>
+          <br />
+          <p>I say it’s time to fly high, but... not too close to the sun.</p>
         </div>
       </div>
     </section>

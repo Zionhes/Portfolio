@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { LiaAnkhSolid } from "react-icons/lia";
 
 function Divider({
@@ -14,7 +14,7 @@ function Divider({
         shadow-xl
         md:h-10"
     >
-      <motion.div
+      <m.div
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.96 }}
         transition={{ duration: 0.01 }}
@@ -23,7 +23,7 @@ function Divider({
           md:h-20 md:w-20"
       >
         {svg ? svg : <LiaAnkhSolid className={`${size} text-white`} />}
-      </motion.div>
+      </m.div>
     </div>
   );
 }

@@ -12,9 +12,7 @@ function Card({ children }) {
           <span className="inline-block h-4 w-4 cursor-pointer rounded-full bg-green-500"></span>
         </div>
       </div>
-      <main className="px-2 py-1 bg-gray-100 h-full">
-        { children }
-      </main>
+      <main className="h-full bg-gray-100 px-2 py-1">{children}</main>
     </article>
   );
 }

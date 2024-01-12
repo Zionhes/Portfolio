@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const sections = [
@@ -31,7 +31,7 @@ function MobileNav() {
 
   return (
     <>
-      <nav className="fixed right-0 top-0 z-50 m-6 p-0.5 text-tertiary">
+      <nav className="fixed right-[-3px] top-[-3px] z-50 m-6 p-0.5 text-tertiary">
         <div
           className=" rounded-xl border-b-4 border-secondary-shadow bg-secondary 
         shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px]
@@ -44,7 +44,7 @@ function MobileNav() {
         <AnimatePresence>
           {isMenuOpen && (
             // Red Container
-            <motion.div
+            <m.div
               key="Red"
               initial={{ height: 0, width: 0 }}
               animate={{ height: "18rem", width: "10.5rem" }}
@@ -57,16 +57,16 @@ function MobileNav() {
               className="fixed right-[2px] top-[2px] -z-10 m-6 rounded-xl border-b-[6px] border-secondary-shadow bg-red-500 text-end shadow-xl"
             >
               {/* Primary container */}
-              <motion.div
+              <m.div
                 key="Primary"
                 initial={{ width: 0 }}
                 animate={{ width: "90%" }}
                 exit={{ width: 0, transition: { duration: 0.1 } }}
                 transition={{ duration: 0.1, delay: 0.15 }}
-                className="mt-16 w-full ml-2 rounded-xl border-b-4 border-primary-shadow bg-primary"
+                className="ml-2 mt-16 w-full rounded-xl border-b-4 border-primary-shadow bg-primary"
               >
                 {/* List */}
-                <motion.ul
+                <m.ul
                   key="Secondart"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -79,9 +79,9 @@ function MobileNav() {
                       <a href={item.href}>{item.label}</a>
                     </li>
                   ))}
-                </motion.ul>
-              </motion.div>
-            </motion.div>
+                </m.ul>
+              </m.div>
+            </m.div>
           )}
         </AnimatePresence>
       </nav>
@@ -91,7 +91,7 @@ function MobileNav() {
 
 function DesktopNav() {
   return (
-    <nav className="fixed bg-blac/15 backdrop-blu right-0 top-0 px-20 py-2 z-50 w-full text-[1.6rem]">
+    <nav className="bg-blac/15 backdrop-blu fixed right-0 top-0 z-50 w-full px-20 py-2 text-[1.6rem]">
       <ul className="flex justify-end gap-14 p-6 font-bold text-white">
         {sections.map((item) => (
           <li className="hover:text-red-500">
