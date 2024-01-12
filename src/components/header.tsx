@@ -18,7 +18,8 @@ function Header() {
         <Card />
         <EmailMe />
       </header>
-    </section>);
+    </section>
+  );
 }
 
 function Card() {

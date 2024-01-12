@@ -18,7 +18,7 @@ function Divider({
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.96 }}
         transition={{ duration: 0.01 }}
-        className="flex h-14 w-14 items-center justify-center rounded-xl border-b-4 border-b-secondary-shadow bg-red-500 
+        className="z-10 flex h-14 w-14 items-center justify-center rounded-xl border-b-4 border-b-secondary-shadow bg-red-500 
           shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px] 
           md:h-20 md:w-20"
       >
