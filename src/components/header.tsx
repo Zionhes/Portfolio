@@ -98,7 +98,7 @@ function ResponsiveText() {
           md:text-[1.25rem]
           xl:mb-0 2xl:text-[1.60rem] 2xl:leading-9"
       >
-        <span className="font-bold text-red-500">+2</span> years as Front-End
+        <span className="font-bold text-red-600">+2</span> years as Front-End
         Developer and ML enthusiast.
       </p>
 

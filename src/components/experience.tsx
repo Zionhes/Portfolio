@@ -26,13 +26,12 @@ export default function Experiences() {
               Jun 2022 - Dic 2023 | Comunication and Information deparment
             </p>
             <br />
-            <ul className="list-inside list-disc marker:text-red-500">
+            <ul className="flex flex-col gap-5 list-inside list-disc marker:text-red-500">
               <li className="decoration-red-500">
                 Administration Dashboard migrated from vanilla HTML, CSS and JS
                 to React, for the management of personal and services daily
                 performed by the organization.
               </li>
-              <br />
               <li>
                 Designing a user interface from scratch and implementing it in a
                 web interface using TailwindCSS.
