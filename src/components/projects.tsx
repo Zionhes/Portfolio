@@ -13,7 +13,7 @@ type Data = {
 export default function Projects({ projects }: { projects: Data[] }) {
   console.log(projects);
   return (
-    <section id="projects" className="custom-bg-4 mx-auto">
+    <section id="projects" className="bg-2 mx-auto pt-5">
       <HeaderTitle>
         <GiEgyptianSphinx className="mr-6 text-[1.8rem] text-red-500" />
         <h2 className="text-xl font-bold">PUBLIC PROJECTS</h2>
@@ -30,13 +30,13 @@ export default function Projects({ projects }: { projects: Data[] }) {
 
 function Item({ project }: { project: Data }) {
   return (
-    <m.article className="flex w-[330px] flex-col overflow-hidden rounded-lg border-b-4 border-b-secondary-shadow bg-primary shadow-xl">
+    <m.article className="flex w-[330px] flex-col overflow-hidden rounded-lg rounded-t-lg border-b-4 border-b-secondary-shadow bg-primary shadow-2xl">
       <img
-        className="mx-auto h-full w-full overflow-hidden object-cover"
+        className="mx-auto h-full w-full rounde overflow-hidden object-cover borde-4 border-black/15 bg-primary"
         src={project.image}
         alt={project.title}
       />
-      <div className="rounded- -mt-1.5 flex h-full flex-col gap-2 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3">
+      <div className="rounded- -mt-2.5 flex h-full flex-col gap-2 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3">
         <header className="text-2xl font-bold text-red-500">
           {project.title}
         </header>
@@ -54,9 +54,9 @@ function Item({ project }: { project: Data }) {
 function Pill({ tech }) {
   return (
     <div
-      className={`rounded px-3 text-sm ${tech[1]} border-b-2 border-b-sky-900 text-${tech[2]}`}
+      className={`rounded px-3 text-sm ${tech[1]} border-b-2 ${tech[3]} ${tech[2]}`}
     >
-      <span className="relative top-[1px]">{tech[0]}</span>
+      <span className="relative top-[0.3px]">{tech[0]}</span>
     </div>
   );
 }

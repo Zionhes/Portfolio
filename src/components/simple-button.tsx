@@ -9,6 +9,7 @@ export default function SimpleButton({
   onClick = null,
   paddingX = "px-2.5",
   paddingY = "py-[0.45rem]",
+  aria = "",
 }: {
   onClick?: any;
   children: any;
@@ -23,12 +24,14 @@ export default function SimpleButton({
   target?: string;
   paddingX?: string;
   paddingY?: string;
+  aria?: string;
 }) {
   return (
     <button
+      aria-label={aria}
       onClick={onClick}
       className={`group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 ${rounded} shadow-sm ${bgColor} ${paddingX}
-                ${paddingY} text-xs font-bold ${textColor} min-[440px]:text-sm md:text-base ${className} 2xl:text-lg`}
+                ${paddingY} text-xs font-bold ${textColor} min-[440px]:text-sm md:text-base ${className} 2xl:text-lg lg:border-b-4`}
     >
       <p className="flex items-center justify-center">{children}</p>
     </button>

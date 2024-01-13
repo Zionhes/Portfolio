@@ -6,7 +6,7 @@ export default function Experiences() {
   const [elementRef, isIntersecting] = useIntersection({ threshold: 0.2 });
 
   return (
-    <section id="experience" className="custom-bg-4 py-16">
+    <section id="experience" className="bg-3 py-16">
       <div className="mx-auto w-[96%] lg:w-[945px]">
         <HeaderTitle>
           <GiEgyptianBird className="mr-[0.85rem] text-[1.8rem] text-red-500" />

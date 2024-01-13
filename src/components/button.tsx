@@ -35,7 +35,8 @@ export default function Button({
       href={href}
       target={target}
       className={`group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 ${rounded} shadow-sm ${bgColor} ${paddingX}
-                ${paddingY} text-xs font-bold ${textColor} min-[440px]:text-sm md:text-base ${className} 2xl:text-lg`}
+                ${paddingY} text-xs font-bold ${textColor} min-[440px]:text-sm md:text-base ${className} 2xl:text-lg
+                lg:border-b-4`}
     >
       <p className="flex items-center justify-center">{children}</p>
     </a>

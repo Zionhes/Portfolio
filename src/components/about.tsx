@@ -3,7 +3,7 @@ import HeaderTitle from "./header-title";
 
 function About() {
   return (
-    <section id="about" className="custom-bg-2 pb-20 pt-14">
+    <section id="about" className="bg-1 pb-20 pt-14">
       <div
         className="mx-auto w-11/12 
         sm:w-[560px]
