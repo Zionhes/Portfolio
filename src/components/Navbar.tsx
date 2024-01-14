@@ -91,7 +91,7 @@ function MobileNav() {
 
 function DesktopNav() {
   return (
-    <nav className="bg-blac/15 backdrop-blu fixed right-0 top-0 z-50 w-full px-20 py-2 text-[1.6rem]">
+    <nav className="bg-blac/15 backdrop-blu fixed right-0 top-0 z-50 w-full px-20 py-2 text-[1.3rem]">
       <ul className="flex justify-end gap-14 p-6 font-bold text-white">
         {sections.map((item) => (
           <li className="hover:text-red-500">
@@ -101,6 +101,20 @@ function DesktopNav() {
       </ul>
     </nav>
   );
+
+  {
+    /*
+  <nav className="w-auto border-b-[6px] border-b-primary-shadow rounded-lg h-[21.5rem] bg-primary fixed right-[2.5rem] top-[50%] translate-y-[-50%] z-50 text-[1.3rem]">
+    <ul className="flex flex-col justify-between items-center w-full h-full p-2 font-bold text-secondary">
+      {sections.map((item) => (
+        <li >
+          <a href={item.href} className="h-10 cursor-pointer w-10 bg-secondary rounded-full mx-auto hover:text-tertiary"></a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+    */
+  }
 }
 
 function NavMenuButton({ onIsMenuClicked }) {

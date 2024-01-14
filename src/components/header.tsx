@@ -10,7 +10,7 @@ function Header() {
   return (
     <section
       id="header"
-      className="bg-1 relative flex h-screen flex-col items-center 
+      className="bg- bg-[#84B1AC] relative flex h-screen flex-col items-center 
         justify-center overflow-hidden px-8"
     >
       <header>
@@ -31,7 +31,7 @@ function Card() {
       className="relative flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.05)_0px_3px_7px_-3px] transition-all ease-out
         sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
         md:h-[19rem] md:max-w-lg 
-        xl:h-[19rem] xl:max-w-[32rem] xl:gap-7 xl:p-7
+        lg:h-[19rem] xl:max-w-[31rem] xl:gap-7 xl:p-7
         "
     >
       <ImageForm />
@@ -59,7 +59,7 @@ function ImageForm() {
       className="h-full basis-20 overflow-hidden rounded-[0.4rem] border-b-[3px] border-b-secondary-shadow bg-secondary shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
         sm:basis-28 
         md:basis-32 
-        xl:h-full xl:w-[4rem] xl:basis-aut xl:rounded xl:border-b-4 xl:border-secondary-shadow
+        xl:h-full xl:basis-28 xl:border-b-4 xl:border-secondary-shadow
         2xl:h-auto 2xl:w-full"
     >
       {
@@ -75,28 +75,27 @@ function ImageForm() {
 function ResponsiveText() {
   return (
     <div className="flex flex-col justify-between">
-      <h3
-        className="-mb-1 font-bold 
+      <h2
+        className="-mb-1 font-bold text-base
         sm:-mb-3 sm:text-xl 
         md:text-[1.25rem]
-        xl:mb-0
+        xl:text-[1.4rem]
         2xl:text-[1.60rem]"
       >
         HEY THERE!
-      </h3>
+      </h2>
       <h1
         className="-mb-1 text-xl font-bold 
           sm:text-[1.63rem] sm:leading-8 
           md:-mb-3 
-          xl:text-3xl xl:mb-0
+          xl:text-3xl
           2xl:text-4xl"
       >
         I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
       </h1>
 
       <p
-        className="2xl: 
-          text-[0.93rem] 
+        className="text-[0.93rem] 
           sm:text-[1.2rem] 
           md:text-[1.25rem]
           xl:mb-0 2xl:text-[1.60rem] 2xl:leading-9"
@@ -108,12 +107,12 @@ function ResponsiveText() {
       {/* Buttons */}
       <div className="flex items-center gap-2 sm:gap-3">
         <Button href={gitHub} target="_blank">
-          <SiGithub className="pb-[0.1rem] mr-[0.3rem] transition-all ease-in group-hover:text-red-500 lg:text-lg lg:mr-[0.3rem] xl:mb-0" />
+          <SiGithub className="text-base pb-[0.1rem] mr-[0.3rem] transition-all ease-in group-hover:text-red-500 lg:text-lg lg:mr-[0.3rem] xl:mb-0" />
           <span>Github</span>
         </Button>
         <span className="text-xl font-thin">|</span>
         <Button href={linkedIn} target="_blank">
-          <SiLinkedin className="mr-1 text-sm transition-all ease-in group-hover:text-sky-500 lg:text-[1rem] lg:mr-1.5" />
+          <SiLinkedin className="mr-[0.35rem] text-sm transition-all ease-in group-hover:text-sky-500 lg:text-[1rem] lg:mr-1.5" />
           <span>LinkedIn</span>
         </Button>
 

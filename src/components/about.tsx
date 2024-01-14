@@ -3,7 +3,7 @@ import HeaderTitle from "./header-title";
 
 function About() {
   return (
-    <section id="about" className="bg-1 pb-20 pt-14">
+    <section id="about" className="bg-1 pb-20 pt-14 lg:py-24">
       <div
         className="mx-auto w-11/12 
         sm:w-[560px]
@@ -12,8 +12,8 @@ function About() {
         xl:w-[950px] xl:text-xl"
       >
         <HeaderTitle>
-          <GiEgyptianProfile className="mr-[0.85rem] text-[1.8rem] text-red-500" />
-          <h2 className="text-xl font-bold">ABOUT</h2>
+          <GiEgyptianProfile className="mr-[0.85rem] text-[1.8rem] text-red-500 lg:text-[2.2rem] ml-5" />
+          <h2 className="text-xl font-bold lg:text-2xl">ABOUT</h2>
         </HeaderTitle>
 
         <div
@@ -21,7 +21,7 @@ function About() {
             shadow-[0px_4px_6px_0px_#00000035,inset_0px_4px_3px_0px_#00000035] 
             before:absolute before:bottom-0 before:left-0 before:h-[2%] before:w-full before:bg-red-500 before:content-['']
             after:absolute
-            lg:p-14 lg:pb-16 lg:pt-12"
+            lg:p-24 lg:pb-20 lg:pt-12 lg:border-b-[5px] lg:w-[90%] lg:before:h-[3%]"
         >
           <p>
             I was born on the 28th of November of 2000 in Carúpano, Venezuela.

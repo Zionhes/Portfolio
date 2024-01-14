@@ -25,7 +25,7 @@ function EmailMe() {
         aria-label="Send me a email"
         className="mx-center mt-[-3.5px] flex h-[3rem] gap-2 rounded-lg border-b-[6px] border-secondary-shadow bg-secondary px-2 py-1 
         shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.25)_0px_3px_7px_-3px]
-        lg:mt-[-2px] lg:h-[3.8rem] lg:gap-1.5 lg:border-b-8 lg:py-1.5
+        lg:mt-[-2px] lg:h-[3.8rem] lg:gap-2 lg:border-b-8 lg:py-1.5
         "
       >
         <input
