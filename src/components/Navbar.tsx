@@ -35,7 +35,7 @@ function MobileNav() {
         <div
           className=" rounded-xl border-b-4 border-secondary-shadow bg-secondary 
         shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px]
-        md:p-4 xl:flex-row xl:justify-end xl:bg-transparent xl:shadow-none"
+        sm:p-2 xl:flex-row xl:justify-end xl:bg-transparent xl:shadow-none"
         >
           <NavMenuButton
             onIsMenuClicked={() => setIsMenuOpen((state) => !state)}
@@ -54,7 +54,7 @@ function MobileNav() {
                 width: 0,
                 transition: { duration: 0.15, delay: 0.15 },
               }}
-              className="fixed right-[2px] top-[2px] -z-10 m-6 rounded-xl border-b-[6px] border-secondary-shadow bg-red-500 text-end shadow-xl"
+              className="fixed right-[2px] top-[2px] -z-10 m-6 rounded-xl border-b-[6px] border-secondary-shadow bg-red-500 text-end shadow-xl md:m-7"
             >
               {/* Primary container */}
               <m.div
@@ -72,7 +72,7 @@ function MobileNav() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   exit={{ opacity: 0, transition: { duration: 0.05 } }}
-                  className="flex flex-col justify-end gap-4 p-6 text-lg font-bold"
+                  className="flex flex-col justify-end gap-4 p-6 text-lg font-bold md:text-xl"
                 >
                   {sections.map((item) => (
                     <li className="hover:text-red-500 focus:text-red-500 active:text-red-500">

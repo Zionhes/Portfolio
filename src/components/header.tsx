@@ -1,20 +1,18 @@
-import { m } from "framer-motion";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import img2 from "../picture-of-me.png";
+import { gitHub, linkedIn } from "./links";
+import { m } from "framer-motion";
 
 import Button from "./button";
 import EmailMe from "./email-me";
-import { gitHub, linkedIn } from "./links";
 
 function Header() {
   return (
     <section
       id="header"
-      className="bg- bg-[#84B1AC] relative flex h-screen flex-col items-center 
-        justify-center overflow-hidden px-8"
+      className="relative flex h-screen items-center justify-center overflow-hidden bg-[#84B1AC] p-4"
     >
-      <header>
-        <BackgroundMountains />
+      <BackgroundMountains />
+      <header className="relative">
         <Card />
         <EmailMe />
       </header>
@@ -28,15 +26,54 @@ function Card() {
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
       transition={{ type: "spring", bounce: 0.53, delay: 0 }}
-      className="relative flex h-56 max-w-[22rem] gap-4 overflow-hidden rounded-[0.6rem] rounded-t-[0.3rem] border-b-[6px] border-primary-shadow bg-primary p-4 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.05)_0px_3px_7px_-3px] transition-all ease-out
-        sm:h-72 sm:max-w-md sm:gap-6 sm:p-6
-        md:h-[19rem] md:max-w-lg 
-        lg:h-[19rem] xl:max-w-[31rem] xl:gap-7 xl:p-7
-        "
+      className="md:h-68 shadow-1 flex h-52 max-w-[21rem] gap-4 rounded-xl border-b-[6px] border-b-primary-shadow bg-primary p-4
+        sm:h-64 sm:max-w-[25.5rem] sm:gap-5 sm:p-5
+        lg:h-72 lg:max-w-[30rem] lg:gap-6 lg:p-6"
     >
-      <ImageForm />
-      <ResponsiveText />
+      <Shape />
+      <Content />
     </m.article>
+  );
+}
+
+function Shape() {
+  return (
+    <div className="shadow-2 h-full w-3/12 rounded-md border-b-[3px] border-b-secondary-shadow bg-secondary lg:border-b-4" />
+  );
+}
+
+function Content() {
+  return (
+    <main className="flex w-full flex-col justify-between">
+      {/* Thanks */}
+      <h3 className="text-normal sm:text-normal-big -mb-1 font-bold lg:text-xl">
+        HEY THERE!
+      </h3>
+
+      {/* Name */}
+      <h1 className="lg:text-big -mb-1 text-xl font-bold sm:text-2xl lg:leading-9">
+        I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
+      </h1>
+
+      {/* Short description */}
+      <p className="text-normal sm:text-normal-big lg:text-xl">
+        Web Developer with <span className="font-bold text-red-600">+2</span>{" "}
+        years of experience.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex items-center gap-2 sm:gap-3">
+        <Button href={gitHub} target="_blank">
+          <SiGithub className="mr-[0.3rem] pb-[0.1rem] text-base transition-all ease-in group-hover:text-red-500 lg:mr-[0.3rem] lg:text-xl" />
+          <span>Github</span>
+        </Button>
+        <span className="text-xl font-thin">|</span>
+        <Button href={linkedIn} target="_blank">
+          <SiLinkedin className="mr-[0.35rem] text-sm transition-all ease-in group-hover:text-sky-500 lg:mr-1.5 lg:text-[1.15rem]" />
+          <span>LinkedIn</span>
+        </Button>
+      </div>
+    </main>
   );
 }
 
@@ -46,82 +83,7 @@ function BackgroundMountains() {
    * but does his work.
    */
   return (
-    <div
-      className="bg-pyramids absolute left-0 top-0 mx-auto h-[100vh] w-[150%]
-        lg:top-[10rem] lg:w-[150%]"
-    />
-  );
-}
-
-function ImageForm() {
-  return (
-    <div
-      className="h-full basis-20 overflow-hidden rounded-[0.4rem] border-b-[3px] border-b-secondary-shadow bg-secondary shadow-[rgba(50,_50,_105,_0.05)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.2)_0px_1px_1px_0px] transition-all
-        sm:basis-28 
-        md:basis-32 
-        xl:h-full xl:basis-28 xl:border-b-4 xl:border-secondary-shadow
-        2xl:h-auto 2xl:w-full"
-    >
-      {
-        /*
-      <div className="hidden h-full w-full xl:block">
-        <img src={img2} alt="image" className="h-full w-full object-cover" />
-      </div>  */
-      }
-    </div>
-  );
-}
-
-function ResponsiveText() {
-  return (
-    <div className="flex flex-col justify-between">
-      <h2
-        className="-mb-1 font-bold text-base
-        sm:-mb-3 sm:text-xl 
-        md:text-[1.25rem]
-        xl:text-[1.4rem]
-        2xl:text-[1.60rem]"
-      >
-        HEY THERE!
-      </h2>
-      <h1
-        className="-mb-1 text-xl font-bold 
-          sm:text-[1.63rem] sm:leading-8 
-          md:-mb-3 
-          xl:text-3xl
-          2xl:text-4xl"
-      >
-        I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
-      </h1>
-
-      <p
-        className="text-[0.93rem] 
-          sm:text-[1.2rem] 
-          md:text-[1.25rem]
-          xl:mb-0 2xl:text-[1.60rem] 2xl:leading-9"
-      >
-        <span className="font-bold text-red-600">+2</span> years as Front-End
-        Developer and ML enthusiast.
-      </p>
-
-      {/* Buttons */}
-      <div className="flex items-center gap-2 sm:gap-3">
-        <Button href={gitHub} target="_blank">
-          <SiGithub className="text-base pb-[0.1rem] mr-[0.3rem] transition-all ease-in group-hover:text-red-500 lg:text-lg lg:mr-[0.3rem] xl:mb-0" />
-          <span>Github</span>
-        </Button>
-        <span className="text-xl font-thin">|</span>
-        <Button href={linkedIn} target="_blank">
-          <SiLinkedin className="mr-[0.35rem] text-sm transition-all ease-in group-hover:text-sky-500 lg:text-[1rem] lg:mr-1.5" />
-          <span>LinkedIn</span>
-        </Button>
-
-        {/* <Button>
-          <SiGoogledocs className="mr-1 text-sm transition-all ease-in group-hover:text-red-500" />
-          Resume
-        </Button> */}
-      </div>
-    </div>
+    <div className="bg-pyramids absolute left-0 top-0 mx-auto h-full w-[150%] lg:top-[10rem] lg:w-[140%]" />
   );
 }
 

@@ -9,7 +9,7 @@ import Projects from "./components/projects";
 import About from "./components/about";
 import Footer from "./components/footer";
 import Divider from "./components/divider";
-import { data as publicProjectsData } from "./public-projects-data"
+import { data as publicProjectsData } from "./public-projects-data";
 import "./App.css";
 
 function App() {
