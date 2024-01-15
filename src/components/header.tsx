@@ -26,9 +26,10 @@ function Card() {
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
       transition={{ type: "spring", bounce: 0.53, delay: 0 }}
-      className="md:h-68 shadow-1 flex h-52 max-w-[21rem] gap-4 rounded-xl border-b-[6px] border-b-primary-shadow bg-primary p-4
-        sm:h-64 sm:max-w-[25.5rem] sm:gap-5 sm:p-5
-        lg:h-72 lg:max-w-[30rem] lg:gap-6 lg:p-6"
+      className="shadow-1 flex h-52 max-w-xs gap-4 rounded-xl border-b-[6px] border-b-primary-shadow bg-primary p-4
+        sm:h-64 sm:max-w-sm sm:gap-5 sm:p-5
+        md:rounded-2xl
+        lg:h-[17rem] lg:max-w-[27rem] lg:p-6"
     >
       <Shape />
       <Content />
@@ -38,7 +39,10 @@ function Card() {
 
 function Shape() {
   return (
-    <div className="shadow-2 h-full w-3/12 rounded-md border-b-[3px] border-b-secondary-shadow bg-secondary lg:border-b-4" />
+    <m.div 
+      whileTap={{ scale: 0.95, transition: { duration: 0.03, type: "spring" } }}
+      className="shadow-2 h-full w-3/12 rounded-md border-b-[3px] border-b-secondary-shadow bg-secondary lg:rounded-lg lg:border-b-4" 
+    />
   );
 }
 
@@ -51,7 +55,7 @@ function Content() {
       </h3>
 
       {/* Name */}
-      <h1 className="lg:text-big -mb-1 text-xl font-bold sm:text-2xl lg:leading-9">
+      <h1 className="lg:text-big -mb-1 text-xl font-bold sm:text-2xl lg:leading-8 lg:text-[1.6rem]">
         I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
       </h1>
 
@@ -64,12 +68,12 @@ function Content() {
       {/* Buttons */}
       <div className="flex items-center gap-2 sm:gap-3">
         <Button href={gitHub} target="_blank">
-          <SiGithub className="mr-[0.3rem] pb-[0.1rem] text-base transition-all ease-in group-hover:text-red-500 lg:mr-[0.3rem] lg:text-xl" />
+          <SiGithub className="mr-[0.3rem] pb-[0.1rem] text-base lg:mr-[0.3rem] lg:text-xl" />
           <span>Github</span>
         </Button>
-        <span className="text-xl font-thin">|</span>
+        <span className="text-xl font-thin md:text-2xl">|</span>
         <Button href={linkedIn} target="_blank">
-          <SiLinkedin className="mr-[0.35rem] text-sm transition-all ease-in group-hover:text-sky-500 lg:mr-1.5 lg:text-[1.15rem]" />
+          <SiLinkedin className="mr-[0.35rem] text-sm lg:mr-1.5 lg:text-[1.15rem]" />
           <span>LinkedIn</span>
         </Button>
       </div>
@@ -83,7 +87,7 @@ function BackgroundMountains() {
    * but does his work.
    */
   return (
-    <div className="bg-pyramids absolute left-0 top-0 mx-auto h-full w-[150%] lg:top-[10rem] lg:w-[140%]" />
+    <div className="bg-pyramids absolute left-0 top-0 h-full w-[150%] lg:top-[10rem] lg:w-[140%]" />
   );
 }
 

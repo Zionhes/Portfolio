@@ -25,11 +25,11 @@ function EmailMe() {
         aria-label="Send me a email"
         className="mx-center shadow-2 mt-[-3.5px] flex h-12 gap-2 rounded-lg border-b-[6px] border-secondary-shadow bg-secondary px-2 py-1
         sm:h-[3.3rem]
-        lg:mt-[-2px] lg:h-[4rem] lg:gap-2 lg:border-b-8 lg:py-1.5"
+        lg:mt-[-2px] lg:rounded-xl lg:h-[4rem] lg:gap-2 lg:border-b-8 lg:py-1.5"
       >
         <input
           aria-label="Here is my email"
-          className="w-full cursor-text rounded bg-primary pt-1 text-center text-[0.82rem]
+          className="w-full cursor-text rounded-lg bg-primary pt-1 text-center text-[0.80rem]
             shadow-[inset_0px_2px_0px_1px_#a73030]
             sm:pt-1 sm:text-base sm:shadow-[inset_0px_2px_0px_2px_#a73030]
             lg:text-lg"
@@ -39,11 +39,11 @@ function EmailMe() {
         />
         <CopyToClipboard text={email} onCopy={notify}>
           <SimpleButton
-            className="ml-[0.1rem] flex max-w-[15%]"
+            className="ml-[0.1rem] flex max-w-[15%] group"
             paddingX="px-3 md:px-3.5"
             aria="Copy email"
           >
-            <LuCopy className="text-lg lg:text-2xl" />
+            <LuCopy className="text-lg lg:text-2xl group-hover:text-white" />
           </SimpleButton>
         </CopyToClipboard>
         <Button
@@ -51,8 +51,9 @@ function EmailMe() {
           href={`mailto:${email}`}
           paddingX="px-3 md:px-3.5"
           aria="Send me a email inmediatly."
+          bt="border-t-red-500"
         >
-          <IoSend className="ml-0.5 text-lg lg:text-2xl" />
+          <IoSend className="ml-0.5 text-lg lg:text-2xl group-hover:text-white" />
         </Button>
       </form>
       <Toaster />

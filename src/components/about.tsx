@@ -3,7 +3,7 @@ import HeaderTitle from "./header-title";
 
 function About() {
   return (
-    <section id="about" className="bg-1 pb-20 pt-14 lg:py-24">
+    <section id="about" className="bg-1 pb-20 pt-14 lg:py-10 lg:pb-14">
       <div
         className="mx-auto w-11/12 
           sm:w-[570px]
@@ -22,7 +22,7 @@ function About() {
             before:absolute before:bottom-0 before:left-0 before:h-[2%] before:w-full before:bg-red-500 before:content-['']
             after:absolute
             sm:text-lg sm:w-[93%] sm:gap-8 sm:p-10 sm:pb-14
-            lg:text-xl lg:w-[90%] lg:border-b-[5px] lg:p-24 lg:pb-20 lg:pt-12 lg:before:h-[3%]"
+            lg:mt-[-2.5px] lg:text-normal-big lg:w-[94%] lg:border-b-[5px] lg:p-24 lg:pb-20 lg:pt-12 lg:before:h-[3%]"
         >
           <p>
             I was born on the 28th of November of 2000 in Carúpano, Venezuela.
