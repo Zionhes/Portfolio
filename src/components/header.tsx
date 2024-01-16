@@ -61,8 +61,8 @@ function Content() {
 
       {/* Short description */}
       <p className="text-normal sm:text-normal-big lg:text-xl">
-        Web Developer with <span className="font-bold text-red-600">+2</span>{" "}
-        years of experience.
+        Web Developer with <span className="font-bold text-red-600">+1</span>{" "}
+        year of experience.
       </p>
 
       {/* Buttons */}

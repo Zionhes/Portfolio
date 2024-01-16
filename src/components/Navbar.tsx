@@ -91,7 +91,7 @@ function MobileNav() {
 
 function DesktopNav() {
   return (
-    <nav className="bg-blac/15 backdrop-blu fixed right-0 top-0 z-50 w-full px-20 py-2 text-[1.3rem]">
+    <nav className="absolute bg-blac/15 backdrop-blu right-0 top-0 z-50 w-full px-10 py-2 text-xl">
       <ul className="flex justify-end gap-14 p-6 font-bold text-white">
         {sections.map((item) => (
           <li className="hover:text-red-500">

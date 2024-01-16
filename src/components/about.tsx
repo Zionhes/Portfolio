@@ -4,7 +4,7 @@ import HeaderTitleYellow from "./header-tittle-yellow";
 
 function About() {
   return (
-    <section id="about" className="relative bg-1 pb-20 pt-14 lg:py-10">
+    <section id="about" className="relative bg-1 pb-20 pt-14 lg:pt-10 lg:pb-20">
       <div className="lg:flex lg:w-[95%] lg:gap-10 mx-auto
         ">
       <article

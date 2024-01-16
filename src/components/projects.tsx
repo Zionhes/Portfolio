@@ -16,7 +16,7 @@ type Data = {
 export default function Projects({ projects }: { projects: Data[] }) {
   return (
     <section id="projects" className="bg-2 mx-auto bg-[#CD7659]/90 py-16 lg:p-8">
-      <div className="mx-auto flex w-[100%] flex-col items-center justify-center sm:w-[570px] md:w-[670px] lg:w-[90%]">
+      <div className="mx-auto flex w-[95%] flex-col items-center justify-center sm:w-[570px] md:w-[670px] lg:w-[90%]">
         {/* Header */}
         <HeaderTitle>
           <GiEgyptianSphinx className="mr-[1.05rem] text-[1.8rem] text-red-500 lg:ml-[1.4rem] lg:text-[2.5rem]" />
@@ -83,7 +83,7 @@ function Item({ project }: { project: Data }) {
 
       {/* Content container */}
       <div
-        className="rounded- relative -mt-2.5 flex h-auto flex-col gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3
+        className="rounded- relative -mt-4 flex h-auto flex-col gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3
           lg:-mt-3.5 lg:gap-8 lg:p-5
         "
       >
@@ -114,10 +114,12 @@ function Item({ project }: { project: Data }) {
 
 function Pill({ tech }) {
   return (
-    <div
-      className={`py-0. rounded px-3 text-sm shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} lg:text-normal`}
+    <m.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.1 }}
+      className={`cursor-default rounded px-3 text-sm shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} lg:text-normal`}
     >
-      <span className="relative top-[0.5px]">{tech[0]}</span>
-    </div>
+      <span className="relative">{tech[0]}</span>
+    </m.div>
   );
 }
