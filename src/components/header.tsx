@@ -9,7 +9,7 @@ function Header() {
   return (
     <section
       id="header"
-      className="relative flex h-screen items-center justify-center overflow-hidden bg-[#84B1AC] p-4"
+      className="bg-1 relative flex h-screen items-center justify-center overflow-hidden bg-[#84B1AC] p-4"
     >
       <BackgroundMountains />
       <header className="relative">

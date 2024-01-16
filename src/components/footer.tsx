@@ -4,8 +4,8 @@ import { linkedIn, gitHub, x } from "./links";
 function Footer() {
   return (
     <footer
-      className="xl:gap-22 mt-[-1rem] flex flex-col justify-between gap-14 rounded-t-lg bg-slate-800
-      p-8 text-slate-200
+      className="relative xl:gap-22 mt-[-1rem] flex flex-col justify-between gap-14 rounded-t-lg bg-slate-800
+      p-8 pb-6 text-slate-200
       sm:items-center sm:p-10
       md:p-12 md:px-24 md:gap-12 md:pb-6
       lg:gap-12 lg:rounded-t-xl lg:p-10 lg:pb-6 lg:pt-12

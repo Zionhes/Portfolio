@@ -38,7 +38,7 @@ export default function Button({
       aria-label={aria}
       href={href}
       target={target}
-      className={`group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 active:border-t-[3px]  ${rounded} shadow-sm ${bgColor} ${paddingX}
+      className={`transition-all ease-out duration-[50ms] group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 active:border-t-[3px]  ${rounded} shadow-sm ${bgColor} ${paddingX}
                 ${paddingY} text-xs font-bold ${textColor} md:py-2.5 md:text-[0.95rem] ${className} lg:rounded-lg lg:border-b-4 ${bt} lg:py-1.5
                 lg:text-lg`}
     >

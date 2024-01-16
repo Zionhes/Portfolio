@@ -23,7 +23,7 @@ function Navbar() {
     };
   }, []);
 
-  return <>{width < breakpoint ? <MobileNav /> : ""}</>;
+  return <>{width < breakpoint ? <MobileNav /> : <DesktopNav />}</>;
 }
 
 function MobileNav() {

@@ -32,7 +32,7 @@ export default function SimpleButton({
       whileHover={{ scale: 1.02 }}
       aria-label={aria}
       onClick={onClick}
-      className={`group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 active:border-t-[3px] ${rounded} shadow-sm ${bgColor} ${paddingX}
+      className={`transition-all ease-out duration-[50ms] group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 active:border-t-[3px] ${rounded} shadow-sm ${bgColor} ${paddingX}
                 ${paddingY} text-xs font-bold ${textColor} min-[440px]:text-sm md:text-base ${className} lg:rounded-lg lg:border-b-4 active:border-t-secondary 2xl:text-lg`}
     >
       <p className="flex items-center justify-center">{children}</p>
