@@ -11,12 +11,14 @@ export default {
   },
   plugins: [
     createThemes({
-      twilight: {
-        'primary': "#FEF3C7",
-        'secondary': '#EF4444', // red-500
-        "tertiary": "#534439",
+      desert: {
+        "primary": "#FEF3C7", // yellow-100
         'primary-shadow': '#b2aa8b',
+        "secondary": '#EF4444', // red-500
         'secondary-shadow': '#a73030',
+        "tertiary": "#534439",
+        "button": "#334155", // slate-700
+        "button-shadow": "#0f172a" // slate-900
       }
     })
   ],

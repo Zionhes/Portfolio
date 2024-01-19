@@ -8,16 +8,14 @@ function Footer() {
       p-8 pb-6 text-slate-200
       sm:items-center sm:p-10
       md:p-12 md:px-24 md:gap-12 md:pb-6
-      lg:gap-12 lg:rounded-t-xl lg:p-10 lg:pb-6 lg:pt-12
-      xl:px-52
-      2xl:px-48"
+      lg:gap-12 lg:rounded-t-xl lg:p-10 lg:pb-6 lg:pt-12"
     >
       {/* Flex container */}
       <div
         className="flex w-full justify-between gap-10 text-sm font-bold
         sm:justify-around
         md:text-base
-        lg:w-[800px] lg:justify-between lg:text-lg"
+        lg:w-[70%] lg:justify-between lg:text-normal-big"
       >
         {/* Networks */}
         <article className="flex flex-col gap-2 md:gap-3 lg:gap-4">
@@ -45,7 +43,7 @@ function Footer() {
       </div>
 
       {/* Copyright container */}
-      <div className="text-center text-xs font-bold md:text-sm lg:flex lg:gap-1 lg:text-start lg:text-sm">
+      <div className="text-center text-xs font-bold md:text-sm lg:flex lg:gap-1">
         <p className="text-slate-400 lg:inline-block">
           DES. AND DEV. BY ANDERSON R. ROMÁN
         </p>

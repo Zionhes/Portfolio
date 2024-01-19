@@ -23,15 +23,14 @@ function EmailMe() {
       <form
         onSubmit={(e) => e.preventDefault()}
         aria-label="Send me a email"
-        className="mx-center shadow-2 mt-[-3.5px] flex h-12 gap-2 rounded-lg border-b-[6px] border-secondary-shadow bg-secondary px-2 py-1
-        sm:h-[3.3rem]
-        lg:mt-[-2px] lg:rounded-xl lg:h-[4rem] lg:gap-2 lg:border-b-8 lg:py-1.5"
+        className="mx-center shadow-2 mt-[-0.2rem] flex h-12 gap-2 rounded-lg border-b-[0.4rem] border-secondary-shadow bg-secondary px-2 py-1
+        lg:mt-[-0.15rem] lg:rounded-xl lg:h-16 lg:gap-2 lg:border-b-8 lg:py-1.5"
       >
         <input
           aria-label="Here is my email"
           className="w-full cursor-text rounded-lg bg-primary pt-1 text-center text-[0.80rem]
             shadow-[inset_0px_2px_0px_1px_#a73030]
-            sm:pt-1 sm:text-base sm:shadow-[inset_0px_2px_0px_2px_#a73030]
+            sm:shadow-[inset_0px_0.15rem_0px_0.12rem_#a73030]
             lg:text-lg"
           type="text"
           value={email}
@@ -51,7 +50,7 @@ function EmailMe() {
           href={`mailto:${email}`}
           paddingX="px-3 md:px-3.5"
           aria="Send me a email inmediatly."
-          bt="border-t-red-500"
+          bt="border-t-secondary"
         >
           <IoSend className="ml-0.5 text-lg lg:text-2xl group-hover:text-white" />
         </Button>

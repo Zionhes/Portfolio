@@ -6,7 +6,7 @@ export default function Button({
   className = "",
   href = null,
   rounded = "rounded-md",
-  bgColor = "bg-[#2f4858]",
+  bgColor = "bg-button",
   textColor = "text-white",
   onClick = null,
   target = "_self",
@@ -33,13 +33,14 @@ export default function Button({
 }) {
   return (
     <m.a
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.025 }}
+      transition={{ duration: 0.1 }}
       onClick={onClick}
       aria-label={aria}
       href={href}
       target={target}
-      className={`transition-all ease-out duration-[50ms] group flex cursor-pointer items-center justify-center border-b-[3px] border-b-slate-900 active:border-b-0 active:border-t-[3px]  ${rounded} shadow-sm ${bgColor} ${paddingX}
-                ${paddingY} text-xs font-bold ${textColor} md:py-2.5 md:text-[0.95rem] ${className} lg:rounded-lg lg:border-b-4 ${bt} lg:py-1.5
+      className={`transition-all ease-out duration-[50ms] group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 active:border-b-0 active:border-t-[0.2rem]  ${rounded} shadow-sm ${bgColor} ${paddingX}
+                ${paddingY} text-xs font-bold ${textColor} ${className} lg:rounded-lg lg:border-b-4 ${bt} lg:py-1.5
                 lg:text-lg`}
     >
       <p className="flex items-center justify-center">{children}</p>

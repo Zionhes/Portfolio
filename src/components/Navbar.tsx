@@ -7,7 +7,7 @@ const sections = [
   { href: "#projects", label: "Projects" },
   { href: "#about", label: "About" },
 ];
-const breakpoint: number = 1080;
+const breakpoint: number = 1024;
 
 function Navbar() {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -32,11 +32,7 @@ function MobileNav() {
   return (
     <>
       <nav className="fixed right-[-3px] top-[-3px] z-50 m-6 p-0.5 text-tertiary">
-        <div
-          className=" rounded-xl border-b-4 border-secondary-shadow bg-secondary 
-        shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px]
-        sm:p-2 xl:flex-row xl:justify-end xl:bg-transparent xl:shadow-none"
-        >
+        <div className=" rounded-xl border-b-4 border-secondary-shadow bg-secondary shadow-1">
           <NavMenuButton
             onIsMenuClicked={() => setIsMenuOpen((state) => !state)}
           />
@@ -54,7 +50,7 @@ function MobileNav() {
                 width: 0,
                 transition: { duration: 0.15, delay: 0.15 },
               }}
-              className="fixed right-[2px] top-[2px] -z-10 m-6 rounded-xl border-b-[6px] border-secondary-shadow bg-red-500 text-end shadow-xl md:m-7"
+              className="fixed right-[2px] top-[2px] -z-10 m-6 rounded-xl border-b-[6px] border-secondary-shadow bg-secondary text-end shadow-xl md:m-7"
             >
               {/* Primary container */}
               <m.div
@@ -75,7 +71,7 @@ function MobileNav() {
                   className="flex flex-col justify-end gap-4 p-6 text-lg font-bold md:text-xl"
                 >
                   {sections.map((item) => (
-                    <li className="hover:text-red-500 focus:text-red-500 active:text-red-500">
+                    <li className="hover:text-secondary">
                       <a href={item.href}>{item.label}</a>
                     </li>
                   ))}
@@ -91,10 +87,12 @@ function MobileNav() {
 
 function DesktopNav() {
   return (
-    <nav className="absolute bg-blac/15 backdrop-blu right-0 top-0 z-50 w-full px-10 py-2 text-xl">
-      <ul className="flex justify-end gap-14 p-6 font-bold text-white">
+    <nav className="fixed overflow-hidden bg-slate-800/50 backdrop-blur right-[1rem] top-[1rem] z-50 rounded-xl rounded-r-0 px-8 text-xl shadow-2
+      before:content-[''] before:right-0 before:absolute before:top-0 before:h-full before:w-5 before:bg-red-500/90
+      ">
+      <ul className="flex justify-end gap-14 p-3 mr-3 font-bold text-white">
         {sections.map((item) => (
-          <li className="hover:text-red-500">
+          <li className="hover:outline-2 ">
             <a href={item.href}>{item.label}</a>
           </li>
         ))}
