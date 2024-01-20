@@ -52,11 +52,8 @@ function Item({ project }: { project: Data }) {
         lg:w-[31%] lg:h-[26rem]"
     >
       {/* Image container*/}
-      <a
+      <div
         className="mx-auto h-full w-full overflow-hidden"
-        href={project.urlView}
-        aria-label="View of the project"
-        target="_blank"
       >
         {/* Image */}
         <img
@@ -67,12 +64,12 @@ function Item({ project }: { project: Data }) {
         <p className="absolute left-[4.6rem] top-28 hidden rounded-lg bg-black/35 px-2 text-xl font-bold text-white group-hover:block">
           Click for view project
         </p>
-      </a>
+      </div>
 
       {/* Content container */}
       <div
         className="h-full relative -mt-4 flex flex-col gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3
-          lg:-mt-3.5 lg:p-5 justify-between
+          lg:-mt-0.5 lg:p-5 justify-between
         "
       >
         <div className="flex w-[98%] flex-col justify-center lg:gap-1">
