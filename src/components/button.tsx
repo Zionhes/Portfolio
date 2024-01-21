@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { m } from "framer-motion"
+import { m } from "framer-motion";
 
 export default function Button({
   children,
@@ -13,7 +13,7 @@ export default function Button({
   paddingX = "px-2.5",
   paddingY = "py-[0.45rem]",
   aria = "",
-  bt = "active:border-t-primary"
+  bt = "active:border-t-primary",
 }: {
   onClick?: any;
   children: any;
@@ -39,7 +39,7 @@ export default function Button({
       aria-label={aria}
       href={href}
       target={target}
-      className={`transition-all ease-out duration-[50ms] group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 active:border-b-0 active:border-t-[0.2rem]  ${rounded} shadow-sm ${bgColor} ${paddingX}
+      className={`group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 transition-all duration-[50ms] ease-out active:border-b-0 active:border-t-[0.2rem]  ${rounded} shadow-sm ${bgColor} ${paddingX}
                 ${paddingY} text-xs font-bold ${textColor} ${className} lg:rounded-lg lg:border-b-4 ${bt} lg:py-1.5
                 lg:text-lg`}
     >

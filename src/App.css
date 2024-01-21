@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@200;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -24,14 +24,14 @@
       font-size: calc(80% + 0.8vmin);
     }
   }
-  
+
   /* lg */
   @media (min-width: 1024px) {
     html {
       font-size: calc(55% + 0.5vmin);
     }
   }
-  
+
   /* xl */
   @media (min-width: 1280px) {
     html {
@@ -122,4 +122,3 @@
     background-position: bottom;
   }
 }
-

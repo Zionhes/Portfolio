@@ -28,7 +28,6 @@ export const data = [
       ["TypeScript", "bg-blue-600", "text-slate-100", "border-blue-900"],
     ],
   },
-
 ];
 
 /*

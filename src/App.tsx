@@ -21,9 +21,13 @@ function App() {
           <Header />
           <Divider />
           <Experiences />
-          <Divider svg={<GiFlyingBeetle className="text-3xl text-white lg:text-4xl" />} />
+          <Divider
+            svg={<GiFlyingBeetle className="text-3xl text-white lg:text-4xl" />}
+          />
           <Projects projects={publicProjectsData} />
-          <Divider svg={<GiEgyptianWalk className="text-3xl text-white lg:text-4xl" />} />
+          <Divider
+            svg={<GiEgyptianWalk className="text-3xl text-white lg:text-4xl" />}
+          />
           <About />
           <Footer />
         </Main>

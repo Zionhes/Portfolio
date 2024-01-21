@@ -38,9 +38,9 @@ function Card() {
 
 function Shape() {
   return (
-    <m.div 
+    <m.div
       whileTap={{ scale: 0.95, transition: { duration: 0.03, type: "spring" } }}
-      className="shadow-2 h-full w-3/12 rounded-md border-b-[0.2rem] border-b-secondary-shadow bg-secondary lg:rounded-lg lg:border-b-4" 
+      className="shadow-2 h-full w-3/12 rounded-md border-b-[0.2rem] border-b-secondary-shadow bg-secondary lg:rounded-lg lg:border-b-4"
     />
   );
 }
@@ -49,12 +49,10 @@ function Content() {
   return (
     <main className="flex w-full flex-col justify-between">
       {/* Thanks */}
-      <h3 className="text-normal -mb-1 font-bold lg:text-xl">
-        HEY THERE!
-      </h3>
+      <h3 className="text-normal -mb-1 font-bold lg:text-xl">HEY THERE!</h3>
 
       {/* Name */}
-      <h1 className="lg:text-big -mb-1 text-xl font-bold lg:leading-8 lg:text-[1.6rem]">
+      <h1 className="-mb-1 text-xl leading-6 font-bold lg:text-[1.59rem] lg:leading-8">
         I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
       </h1>
 

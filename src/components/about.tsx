@@ -4,12 +4,11 @@ import HeaderTitleYellow from "./header-tittle-yellow";
 
 function About() {
   return (
-    <section id="about" className="bg-1 pt-10 pb-20 lg:pt-16">
+    <section id="about" className="bg-1 pb-20 pt-10 lg:pt-16">
       {/* Container */}
-      <main className="mx-auto flex flex-col justify-center gap-10 w-[95%] sm:w-[85%] lg:w-[95%] lg:flex-row">
-
+      <main className="mx-auto flex w-[95%] flex-col justify-center gap-10 sm:w-[85%] lg:w-[95%] lg:flex-row">
         {/* Red article */}
-        <article className="mx-auto flex flex-col w-full">
+        <article className="mx-auto flex w-full flex-col">
           <HeaderTitle>
             <GiEgyptianProfile className="ml-5 mr-[0.85rem] text-[1.8rem] text-secondary lg:text-[2.2rem]" />
             <h2 className="mt-1 text-xl font-bold lg:text-[1.6rem]">
@@ -18,7 +17,7 @@ function About() {
           </HeaderTitle>
 
           <div
-            className="shadow-1 grow lg:text-normal-big relative mx-auto mt-[-0.2rem] h-auto w-[95%] overflow-hidden rounded-b-lg border-b-[0.2rem] border-secondary-shadow bg-primary px-7
+            className="shadow-1 lg:text-normal-big relative mx-auto mt-[-0.2rem] h-auto w-[95%] grow overflow-hidden rounded-b-lg border-b-[0.2rem] border-secondary-shadow bg-primary px-7
             pb-10 pt-4 before:absolute before:bottom-0 before:left-0 before:h-[3%] before:w-full
             before:bg-secondary before:content-[''] after:absolute
             lg:mt-[-2.5px] lg:w-[96%] lg:border-b-[5px] lg:px-14 lg:pb-16 lg:pt-10 lg:before:h-[3%]"
@@ -48,16 +47,14 @@ function About() {
 
         {/* Yellow article */}
 
-        <article className="mx-auto justify-stretc flex flex-col w-full lg:w-auto">
+        <article className="justify-stretc mx-auto flex w-full flex-col lg:w-auto">
           <HeaderTitleYellow>
             <GiEgyptianPyramids className="ml-5 mr-[0.85rem] text-[1.8rem] text-secondary lg:text-[2.2rem]" />
-            <h2 className="mt-1 text-xl font-bold lg:text-[1.6rem]">
-              SKILLS
-            </h2>
+            <h2 className="mt-1 text-xl font-bold lg:text-[1.6rem]">SKILLS</h2>
           </HeaderTitleYellow>
 
           <main
-            className="shadow-1 grow lg:text-normal-big relative mx-auto mt-[-3px] w-[95%] overflow-hidden rounded-b-lg border-b-[3px] border-yellow-600 bg-primary px-7 pb-10
+            className="shadow-1 lg:text-normal-big relative mx-auto mt-[-3px] w-[95%] grow overflow-hidden rounded-b-lg border-b-[3px] border-yellow-600 bg-primary px-7 pb-10
             pt-4 before:absolute before:bottom-0 before:left-0 before:h-[3%] before:w-full before:bg-yellow-400
             before:content-['']
             after:absolute
@@ -65,12 +62,18 @@ function About() {
             lg:before:h-[4%]"
           >
             <ul className="flex list-inside list-disc flex-col gap-4 marker:text-secondary">
-              <li>React and ecosystem: axios, react router, redux, stankbuck react, etc.</li>
+              <li>
+                React and ecosystem: axios, react router, redux, stankbuck
+                react, etc.
+              </li>
               <li>TypeScript, JavaScript, HTML, CSS and SASS.</li>
               <li>English, French and German.</li>
               <li>Next.Js, Express and Astro.</li>
               <li>SQL, C, Python and Rust.</li>
-              <p>Open to learn Vue, React Native, Swift and Back-end with Rust or Python</p>
+              <p>
+                Open to learn Vue, React Native, Swift and Back-end with Rust or
+                Python
+              </p>
             </ul>
           </main>
         </article>

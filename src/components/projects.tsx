@@ -24,11 +24,11 @@ export default function Projects({ projects }: { projects: Data[] }) {
             PUBLIC PROJECTS
           </h2>
         </HeaderTitle>
-        <div className="relative -mt-[3px] bg-teal-400/30 flex w-[95%] justify-center border-x border-x-teal-300/30 lg:w-[97%]">
+        <div className="relative -mt-[3px] flex w-[95%] justify-center border-x border-x-teal-300/30 bg-teal-400/30 lg:w-[97%]">
           {/* Projects container */}
           <main
-            className="mt-[-3.5px] flex flex-wrap justify-center w-full flex-col items-center gap-8 border-teal-300/30 p-4
-              sm:flex-row sm:gap-5 sm:p-5 sm:justify-normal sm:items-center
+            className="mt-[-3.5px] flex w-full flex-col flex-wrap items-center justify-center gap-8 border-teal-300/30 p-4
+              sm:flex-row sm:items-center sm:justify-normal sm:gap-5 sm:p-5
               md:gap-6
               lg:gap-8 lg:p-8"
           >
@@ -46,15 +46,13 @@ export default function Projects({ projects }: { projects: Data[] }) {
 function Item({ project }: { project: Data }) {
   return (
     <m.article
-      className="relative flex w-[90%] flex-col overflow-hidden rounded-xl rounded-t-lg border-b-4 border-b-secondary-shadow shadow-1
-        sm:w-[48%] sm:h-[22rem]
-        md:w-[47.5%] md:h-[23rem]
-        lg:w-[31%] lg:h-[26rem]"
+      className="shadow-1 relative flex w-[90%] flex-col overflow-hidden rounded-xl rounded-t-lg border-b-4 border-b-secondary-shadow
+        sm:h-[22rem] sm:w-[48%]
+        md:h-[23rem] md:w-[47.5%]
+        lg:h-[26rem] lg:w-[31%]"
     >
       {/* Image container*/}
-      <div
-        className="mx-auto h-full w-full overflow-hidden"
-      >
+      <div className="mx-auto h-full w-full overflow-hidden">
         {/* Image */}
         <img
           className="h-full w-full overflow-hidden rounded bg-primary object-cover"
@@ -68,19 +66,19 @@ function Item({ project }: { project: Data }) {
 
       {/* Content container */}
       <div
-        className="h-full relative -mt-4 flex flex-col gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4 pt-3
-          lg:-mt-0.5 lg:p-5 justify-between
+        className="relative -mt-4 flex h-full flex-col justify-between gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4
+          pt-3 lg:-mt-0.5 lg:p-5
         "
       >
         <div className="flex w-[98%] flex-col justify-center lg:gap-1">
-          <header className="flex items-cente justify-between text-[1.35rem] font-bold text-secondary lg:text-2xl">
+          <header className="items-cente flex justify-between text-[1.35rem] font-bold text-secondary lg:text-2xl">
             <a
               href={project.urlView}
               className="transition-all hover:underline hover:decoration-secondary"
               target="_blank"
             >
               {project.title}
-              <HiOutlineExternalLink className="ml-1 mb-0.5 inline text-xl" />
+              <HiOutlineExternalLink className="mb-0.5 ml-1 inline text-xl" />
             </a>
             <a
               href={project.urlGithub}
@@ -95,7 +93,7 @@ function Item({ project }: { project: Data }) {
           </main>
         </div>
 
-        <aside className="justify-end flex flex-wrap gap-1">
+        <aside className="flex flex-wrap justify-end gap-1">
           {project.stack.map((tech) => (
             <Pill tech={tech} />
           ))}
@@ -110,7 +108,7 @@ function Pill({ tech }) {
     <m.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.1 }}
-      className={`cursor-default rounded px-3 text-xs shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} lg:text-sm xl:text-normal`}
+      className={`cursor-default rounded px-3 text-xs shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} xl:text-normal lg:text-sm`}
     >
       <span className="relative">{tech[0]}</span>
     </m.div>

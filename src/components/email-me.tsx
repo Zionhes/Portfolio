@@ -24,7 +24,7 @@ function EmailMe() {
         onSubmit={(e) => e.preventDefault()}
         aria-label="Send me a email"
         className="mx-center shadow-2 mt-[-0.2rem] flex h-12 gap-2 rounded-lg border-b-[0.4rem] border-secondary-shadow bg-secondary px-2 py-1
-        lg:mt-[-0.15rem] lg:rounded-xl lg:h-16 lg:gap-2 lg:border-b-8 lg:py-1.5"
+        lg:mt-[-0.15rem] lg:h-16 lg:gap-2 lg:rounded-xl lg:border-b-8 lg:py-1.5"
       >
         <input
           aria-label="Here is my email"
@@ -38,11 +38,11 @@ function EmailMe() {
         />
         <CopyToClipboard text={email} onCopy={notify}>
           <SimpleButton
-            className="ml-[0.1rem] flex max-w-[15%] group"
+            className="group ml-[0.1rem] flex max-w-[15%]"
             paddingX="px-3 md:px-3.5"
             aria="Copy email"
           >
-            <LuCopy className="text-lg lg:text-2xl group-hover:text-white" />
+            <LuCopy className="text-lg group-hover:text-white lg:text-2xl" />
           </SimpleButton>
         </CopyToClipboard>
         <Button
@@ -52,7 +52,7 @@ function EmailMe() {
           aria="Send me a email inmediatly."
           bt="border-t-secondary"
         >
-          <IoSend className="ml-0.5 text-lg lg:text-2xl group-hover:text-white" />
+          <IoSend className="ml-0.5 text-lg group-hover:text-white lg:text-2xl" />
         </Button>
       </form>
       <Toaster />

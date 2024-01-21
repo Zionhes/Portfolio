@@ -32,7 +32,7 @@ function MobileNav() {
   return (
     <>
       <nav className="fixed right-[-3px] top-[-3px] z-50 m-6 p-0.5 text-tertiary">
-        <div className=" rounded-xl border-b-4 border-secondary-shadow bg-secondary shadow-1">
+        <div className=" shadow-1 rounded-xl border-b-4 border-secondary-shadow bg-secondary">
           <NavMenuButton
             onIsMenuClicked={() => setIsMenuOpen((state) => !state)}
           />
@@ -87,10 +87,12 @@ function MobileNav() {
 
 function DesktopNav() {
   return (
-    <nav className="fixed overflow-hidden bg-slate-800/50 backdrop-blur right-[1rem] top-[1rem] z-50 rounded-xl rounded-r-0 px-8 text-xl shadow-2
-      before:content-[''] before:right-0 before:absolute before:top-0 before:h-full before:w-5 before:bg-red-500/90
-      ">
-      <ul className="flex justify-end gap-14 p-3 mr-3 font-bold text-white">
+    <nav
+      className="rounded-r-0 shadow-2 fixed right-[1rem] top-[1rem] z-50 overflow-hidden rounded-xl bg-slate-800/50 px-8 text-xl backdrop-blur
+      before:absolute before:right-0 before:top-0 before:h-full before:w-5 before:bg-red-500/90 before:content-['']
+      "
+    >
+      <ul className="mr-3 flex justify-end gap-14 p-3 font-bold text-white">
         {sections.map((item) => (
           <li className="hover:outline-2 ">
             <a href={item.href}>{item.label}</a>

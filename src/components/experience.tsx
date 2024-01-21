@@ -13,8 +13,8 @@ export default function Experiences() {
 
         {/* Container */}
         <main
-          className="relative shadow-1 mx-auto mt-[-0.2rem] flex w-[95%] flex-col items-center gap-4 overflow-hidden border-x border-teal-300/30 bg-teal-500/25 p-4
-            lg:w-[95%] lg:grow lg:flex-row lg:items-stretch lg:p-8 lg:gap-8"
+          className="shadow-1 relative mx-auto mt-[-0.2rem] flex w-[95%] flex-col items-center gap-4 overflow-hidden border-x border-teal-300/30 bg-teal-500/25 p-4
+            lg:w-[95%] lg:grow lg:flex-row lg:items-stretch lg:gap-8 lg:p-8"
         >
           <m.article
             whileHover={{ scale: 1.04 }}
@@ -52,8 +52,8 @@ export default function Experiences() {
               lg:h-full lg:border-b-8 lg:p-8 lg:py-10 2xl:p-12"
             >
               <h3 className="font-bold lg:text-xl 2xl:text-2xl">
-                <span className="text-secondary">Full-stack COO</span> • Alcaldía
-                Bolivariana del Municipio Ribero
+                <span className="text-secondary">Full-stack COO</span> •
+                Alcaldía Bolivariana del Municipio Ribero
               </h3>
               <p className="mt-2 text-[0.85rem] font-light lg:text-base 2xl:text-lg">
                 Oct 2023 - Dic 2023 | Technological Development Department
