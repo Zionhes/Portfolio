@@ -9,7 +9,7 @@ function Header() {
   return (
     <section
       id="header"
-      className="bg-1 relative flex h-screen items-center justify-center overflow-hidden bg-[#84B1AC] p-4"
+      className="bg-1 relative flex h-screen items-center justify-center overflow-hidden p-4"
     >
       <BackgroundMountains />
       <header className="relative">
@@ -28,7 +28,7 @@ function Card() {
       transition={{ type: "spring", bounce: 0.53, delay: 0 }}
       className="shadow-1 flex h-52 max-w-xs gap-4 rounded-xl border-b-[0.4rem] border-b-primary-shadow bg-primary p-4
         md:rounded-2xl
-        lg:h-[17rem] lg:max-w-[27rem] lg:p-6"
+        lg:h-[17rem] lg:max-w-[26.2rem] lg:p-6"
     >
       <Shape />
       <Content />
@@ -49,15 +49,15 @@ function Content() {
   return (
     <main className="flex w-full flex-col justify-between">
       {/* Thanks */}
-      <h3 className="text-normal -mb-1 font-bold lg:text-xl">HEY THERE!</h3>
+      <h3 className="text-normal -mb-1 font-bold lg:text-normal-big">HEY THERE!</h3>
 
       {/* Name */}
-      <h1 className="-mb-1 text-xl leading-6 font-bold lg:text-[1.59rem] lg:leading-8">
+      <h1 className="-mb-1 text-xl leading-6 font-bold lg:text-2xl">
         I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
       </h1>
 
       {/* Short description */}
-      <p className="text-normal lg:text-xl">
+      <p className="text-normal lg:text-normal-big">
         Web Developer with <span className="font-bold text-secondary">+1</span>{" "}
         year of experience.
       </p>

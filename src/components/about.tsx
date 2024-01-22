@@ -63,8 +63,7 @@ function About() {
           >
             <ul className="flex list-inside list-disc flex-col gap-4 marker:text-secondary">
               <li>
-                React and ecosystem: axios, react router, redux, stankbuck
-                react, etc.
+                React and ecosystem: axios, react router and redux.
               </li>
               <li>TypeScript, JavaScript, HTML, CSS and SASS.</li>
               <li>English, French and German.</li>

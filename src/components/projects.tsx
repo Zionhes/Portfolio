@@ -47,12 +47,12 @@ function Item({ project }: { project: Data }) {
   return (
     <m.article
       className="shadow-1 relative flex w-[90%] flex-col overflow-hidden rounded-xl rounded-t-lg border-b-4 border-b-secondary-shadow
-        sm:h-[22rem] sm:w-[48%]
+        sm:h-[22rem] sm:w-[47.6%]
         md:h-[23rem] md:w-[47.5%]
-        lg:h-[26rem] lg:w-[31%]"
+        lg:h-[28rem] lg:w-[30.5%]"
     >
       {/* Image container*/}
-      <div className="mx-auto h-full w-full overflow-hidden">
+      <div className="mx-auto h-full w-full sm:h-[85%] xl:h-full overflow-hidden">
         {/* Image */}
         <img
           className="h-full w-full overflow-hidden rounded bg-primary object-cover"
@@ -67,8 +67,7 @@ function Item({ project }: { project: Data }) {
       {/* Content container */}
       <div
         className="relative -mt-4 flex h-full flex-col justify-between gap-4 overflow-hidden rounded-t-lg border-x-4 border-y-[6px] border-t-[2px] border-black/15 border-b-secondary border-t-white/90 bg-primary px-4 pb-4
-          pt-3 lg:-mt-0.5 lg:p-5
-        "
+          pt-3 lg:-mt-0.5 lg:p-5"
       >
         <div className="flex w-[98%] flex-col justify-center lg:gap-1">
           <header className="items-cente flex justify-between text-[1.35rem] font-bold text-secondary lg:text-2xl">
@@ -88,7 +87,7 @@ function Item({ project }: { project: Data }) {
               Code
             </a>
           </header>
-          <main className="lg:text-normal-big grow text-base">
+          <main className="lg:text-normal-big grow text-normal">
             {project.description}
           </main>
         </div>
@@ -108,7 +107,7 @@ function Pill({ tech }) {
     <m.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.1 }}
-      className={`cursor-default rounded px-3 text-xs shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} xl:text-normal lg:text-sm`}
+      className={`cursor-default rounded px-2 text-xs shadow ${tech[1]} border-b-2 ${tech[3]} ${tech[2]} lg:text-normal lg:py-[0.1rem]`}
     >
       <span className="relative">{tech[0]}</span>
     </m.div>

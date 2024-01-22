@@ -24,21 +24,19 @@ export default function Experiences() {
           >
             <h3 className="font-bold lg:text-xl 2xl:text-2xl">
               <span className="text-secondary">Front-End Developer</span> •
-              Alcaldía Bolivariana del Municipio Ribero
+              At Municipality of Ribero, Venezuela.
             </h3>
             <p className="mt-2 text-[0.85rem] font-light lg:text-base 2xl:text-lg">
-              Jun 2022 - Dic 2023 | Comunication and Information deparment
+              Jun 2022 - Dic 2023 | Comunication and Information deparment.
             </p>
             <br />
             <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
               <li className="decoration-secondary">
                 Administration Dashboard migrated from vanilla HTML, CSS and JS
-                to React, for the management of personal and services daily
-                performed by the organization.
+                to React.               
               </li>
               <li>
-                Designing a user interface from scratch and implementing it in a
-                web interface using TailwindCSS.
+                UI rearranged from scratch and implemented with TailwindCSS for the management of personal and services daily performed by the organization.
               </li>
             </ul>
           </m.article>
@@ -52,18 +50,16 @@ export default function Experiences() {
               lg:h-full lg:border-b-8 lg:p-8 lg:py-10 2xl:p-12"
             >
               <h3 className="font-bold lg:text-xl 2xl:text-2xl">
-                <span className="text-secondary">Full-stack COO</span> •
-                Alcaldía Bolivariana del Municipio Ribero
+                <span className="text-secondary">Full-Stack Developer</span> •
+                At Municipality of Ribero, Venezuela
               </h3>
               <p className="mt-2 text-[0.85rem] font-light lg:text-base 2xl:text-lg">
-                Oct 2023 - Dic 2023 | Technological Development Department
+                Oct 2023 - Dic 2023 | Technological Development department.
               </p>
               <br />
               <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
                 <li>
-                  Designing and deployment of a web application from scratch
-                  written in React, Tailwind, Next.Js and PostgreSQL for tax
-                  managment of merchants in the region.
+                  Design and implementation from scratch of a web application for tax managment of merchants in the region, using React, Tailwind CSS, Next.Js and PostgreSQL.
                 </li>
               </ul>
             </m.article>
