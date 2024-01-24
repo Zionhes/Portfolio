@@ -27,7 +27,7 @@ export default function Experiences() {
               At Municipality of Ribero, Venezuela.
             </h3>
             <p className="mt-2 text-[0.85rem] font-light lg:text-base 2xl:text-lg">
-              Jun 2022 - Dic 2023 | Comunication and Information deparment.
+              Jun 2022 - Dic 2023 | Communication and Information department.
             </p>
             <br />
             <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
@@ -36,7 +36,7 @@ export default function Experiences() {
                 to React.               
               </li>
               <li>
-                UI rearranged from scratch and implemented with TailwindCSS for the management of personal and services daily performed by the organization.
+                UI rearranged from scratch and implemented with TailwindCSS for the management of personnel and services daily performed by the organization.
               </li>
             </ul>
           </m.article>
@@ -59,7 +59,7 @@ export default function Experiences() {
               <br />
               <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
                 <li>
-                  Design and implementation from scratch of a web application for tax managment of merchants in the region, using React, Tailwind CSS, Next.Js and PostgreSQL.
+                  Design and implementation from scratch of a web application for tax management of merchants in the region, using React, Tailwind CSS, Next.Js and PostgreSQL.
                 </li>
               </ul>
             </m.article>

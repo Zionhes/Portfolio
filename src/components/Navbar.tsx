@@ -142,4 +142,5 @@ function NavMenuButton({ onIsMenuClicked }) {
   );
 }
 
+
 export default Navbar;

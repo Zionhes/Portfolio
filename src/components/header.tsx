@@ -1,7 +1,9 @@
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { gitHub, linkedIn } from "./links";
+import { IoDocumentText } from "react-icons/io5";
+import { gitHub, linkedIn, resume } from "./links";
 import { m } from "framer-motion";
 
+import Resume from "./Resume";
 import Button from "./button";
 import EmailMe from "./email-me";
 
@@ -49,10 +51,12 @@ function Content() {
   return (
     <main className="flex w-full flex-col justify-between">
       {/* Thanks */}
-      <h3 className="text-normal -mb-1 font-bold lg:text-normal-big">HEY THERE!</h3>
+      <h3 className="text-normal lg:text-normal-big -mb-1 font-bold">
+        HEY THERE!
+      </h3>
 
       {/* Name */}
-      <h1 className="-mb-1 text-xl leading-6 font-bold lg:text-2xl">
+      <h1 className="-mb-1 text-xl font-bold leading-6 lg:text-2xl">
         I AM <span className="text-secondary">ANDERSON RAMOS ROMÁN</span>
       </h1>
 
@@ -64,14 +68,19 @@ function Content() {
 
       {/* Buttons */}
       <div className="flex items-center gap-2">
-        <Button href={gitHub} target="_blank">
-          <SiGithub className="mr-[0.3rem] pb-[0.1rem] text-base lg:mr-[0.3rem] lg:text-xl" />
-          <span>Github</span>
+        <Button href={resume} target="_blank">
+          <IoDocumentText className="transition-all duration-[80ms] group-hover:text-secondary mr-[0.3rem] pb-[0.1rem] text-base lg:mr-[0.3rem] lg:text-xl" />
+          <span>Resume</span>
         </Button>
-        <span className="text-xl font-thin md:text-2xl">|</span>
+        {/*
+       <span className="text-xl font-thin text-secondary md:text-2xl">|</span>  
+       */}
         <Button href={linkedIn} target="_blank">
-          <SiLinkedin className="mr-[0.35rem] text-sm lg:mr-1.5 lg:text-[1.15rem]" />
+          <SiLinkedin className="transition-all duration-100 group-hover:text-secondary mr-[0.35rem] text-sm lg:mr-1.5 lg:text-[1.15rem]" />
           <span>LinkedIn</span>
+        </Button>
+        <Button href={gitHub} className="lg:h-[40.67px]" target="_blank">
+          <SiGithub className="transition-all duration-100 group-hover:text-secondary text-base lg:text-2xl" />
         </Button>
       </div>
     </main>

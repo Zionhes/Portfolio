@@ -1,5 +1,5 @@
 import logo from "../logo-white.svg";
-import { linkedIn, gitHub, x } from "./links";
+import { linkedIn, gitHub, x, resume } from "./links";
 
 function Footer() {
   return (
@@ -29,7 +29,7 @@ function Footer() {
           <a href="" className="text-white" target="_blank">
             Page
           </a>
-          <a href="">Resume</a>
+          <a href={resume}>Resume</a>
           <a href="">Buy me a coffe</a>
         </article>
 

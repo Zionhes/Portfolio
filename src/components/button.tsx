@@ -33,13 +33,11 @@ export default function Button({
 }) {
   return (
     <m.a
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: "spring", duration: 0.1 }}
       onClick={onClick}
       aria-label={aria}
       href={href}
       target={target}
-      className={`group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 transition-all duration-[50ms] ease-out active:border-b-0 active:border-t-[0.2rem]  ${rounded} shadow-sm ${bgColor} ${paddingX}
+      className={`group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 transition-all duration-100 ease-out active:border-b-0 active:border-t-[0.2rem]  ${rounded} shadow-sm ${bgColor} ${paddingX}
                 ${paddingY} text-xs font-bold ${textColor} ${className} lg:rounded-lg lg:border-b-4 ${bt} lg:py-[0.3rem]
                 lg:text-lg`}
     >

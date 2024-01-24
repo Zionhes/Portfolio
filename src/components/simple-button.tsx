@@ -29,7 +29,6 @@ export default function SimpleButton({
 }) {
   return (
     <m.button
-      whileHover={{ scale: 1.02 }}
       aria-label={aria}
       onClick={onClick}
       className={`group flex cursor-pointer items-center justify-center border-b-[0.2rem] border-b-slate-900 transition-all duration-[50ms] ease-out active:border-b-0 active:border-t-[0.2rem] ${rounded} shadow-sm ${bgColor} ${paddingX}
