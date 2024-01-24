@@ -52,7 +52,7 @@ function Item({ project }: { project: Data }) {
         lg:h-[28rem] lg:w-[30.5%]"
     >
       {/* Image container*/}
-      <div className="mx-auto h-full w-full sm:h-[85%] xl:h-full overflow-hidden">
+      <div className="mx-auto h-full w-full overflow-hidden sm:h-[85%] xl:h-full">
         {/* Image */}
         <img
           className="h-full w-full overflow-hidden rounded bg-primary object-cover"
@@ -87,7 +87,7 @@ function Item({ project }: { project: Data }) {
               Code
             </a>
           </header>
-          <main className="lg:text-normal-big grow text-normal">
+          <main className="lg:text-normal-big text-normal grow">
             {project.description}
           </main>
         </div>

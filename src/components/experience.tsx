@@ -23,8 +23,8 @@ export default function Experiences() {
               lg:border-b-8 lg:p-8 lg:py-10 2xl:p-12"
           >
             <h3 className="font-bold lg:text-xl 2xl:text-2xl">
-              <span className="text-secondary">Front-End Developer</span> •
-              At Municipality of Ribero, Venezuela.
+              <span className="text-secondary">Front-End Developer</span> • At
+              Municipality of Ribero, Venezuela.
             </h3>
             <p className="mt-2 text-[0.85rem] font-light lg:text-base 2xl:text-lg">
               Jun 2022 - Dic 2023 | Communication and Information department.
@@ -32,11 +32,12 @@ export default function Experiences() {
             <br />
             <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
               <li className="decoration-secondary">
-                Administration Dashboard migrated from vanilla HTML, CSS and JS
-                to React.               
+                Migration of Administration Dashboard written in HTML, CSS and
+                JS to React and Tailwind.
               </li>
               <li>
-                UI rearranged from scratch and implemented with TailwindCSS for the management of personnel and services daily performed by the organization.
+                UI rearrangement from scratch for the management of personnel
+                and services daily performed by the organization.
               </li>
             </ul>
           </m.article>
@@ -59,7 +60,9 @@ export default function Experiences() {
               <br />
               <ul className="lg:text-normal-big flex list-inside list-disc flex-col gap-5 marker:text-secondary 2xl:text-xl">
                 <li>
-                  Design and implementation from scratch of a web application for tax management of merchants in the region, using React, Tailwind CSS, Next.Js and PostgreSQL.
+                  Design and implementation of a web application for tax
+                  management of merchants in the region, using React, Tailwind
+                  CSS, Next.Js and PostgreSQL.
                 </li>
               </ul>
             </m.article>

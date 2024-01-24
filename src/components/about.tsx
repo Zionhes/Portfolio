@@ -63,12 +63,14 @@ function About() {
           >
             <ul className="flex list-inside list-disc flex-col gap-4 marker:text-secondary">
               <li>
-                React and ecosystem: axios, react router and redux.
+                Fast learning, strategic planning, team player, abstract
+                thinking, problem solving and adaptability.
               </li>
+              <li>React and ecosystem: axios, react router and redux.</li>
               <li>TypeScript, JavaScript, HTML, CSS and SASS.</li>
               <li>English, French and German.</li>
-              <li>Next.Js, Express and Astro.</li>
-              <li>SQL, C, Python and Rust.</li>
+              <li>Next.Js, Express and SQL.</li>
+              <li>C, Python and Rust.</li>
               <p>
                 Open to learn Vue, React Native, Swift and Back-end with Rust or
                 Python

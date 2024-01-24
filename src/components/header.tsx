@@ -69,18 +69,18 @@ function Content() {
       {/* Buttons */}
       <div className="flex items-center gap-2">
         <Button href={resume} target="_blank">
-          <IoDocumentText className="transition-all duration-[80ms] group-hover:text-secondary mr-[0.3rem] pb-[0.1rem] text-base lg:mr-[0.3rem] lg:text-xl" />
+          <IoDocumentText className="mr-[0.3rem] pb-[0.1rem] text-base transition-all duration-[80ms] group-hover:text-secondary lg:mr-[0.3rem] lg:text-xl" />
           <span>Resume</span>
         </Button>
         {/*
        <span className="text-xl font-thin text-secondary md:text-2xl">|</span>  
        */}
         <Button href={linkedIn} target="_blank">
-          <SiLinkedin className="transition-all duration-100 group-hover:text-secondary mr-[0.35rem] text-sm lg:mr-1.5 lg:text-[1.15rem]" />
+          <SiLinkedin className="mr-[0.35rem] text-sm transition-all duration-100 group-hover:text-secondary lg:mr-1.5 lg:text-[1.15rem]" />
           <span>LinkedIn</span>
         </Button>
         <Button href={gitHub} className="lg:h-[40.67px]" target="_blank">
-          <SiGithub className="transition-all duration-100 group-hover:text-secondary text-base lg:text-2xl" />
+          <SiGithub className="text-base transition-all duration-100 group-hover:text-secondary lg:text-2xl" />
         </Button>
       </div>
     </main>
